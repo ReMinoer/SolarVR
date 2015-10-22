@@ -3,11 +3,21 @@ using System.Collections;
 
 public class EnvironmentalSound : MonoBehaviour {
 
-    public AudioSource source;
+    private AudioSource source;
     private EnvironmentalSoundTrigger currentSound = null;
 
     private int fadingTime = 1;
     private int nbIncrement = 10;
+
+    void Awake()
+    {
+        source = gameObject.GetComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        source.loop = true;
+    }
 
     IEnumerator FadeOut()
     {
@@ -19,6 +29,7 @@ public class EnvironmentalSound : MonoBehaviour {
         }
         yield return new WaitForSeconds(fadingTime);
     }
+
     IEnumerator FadeIn()
     {
         float delta = (1 / (float)nbIncrement) * fadingTime;
