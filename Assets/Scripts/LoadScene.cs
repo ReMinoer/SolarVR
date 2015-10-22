@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
-using System.Collections;
 
 public class LoadScene : MonoBehaviour {
 
@@ -8,10 +6,8 @@ public class LoadScene : MonoBehaviour {
 
     void Start()
     {
-        Debug.Log(sceneName);
         if (sceneName == "-1")
         {
-            Debug.Log("Ouech'");
             sceneName = Application.loadedLevelName;
         }
     }

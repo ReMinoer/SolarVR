@@ -1,31 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(AudioSource))]
 public class InteractionalSound : MonoBehaviour {
 
+    public List<AudioClip> clips;
+
     private AudioSource source;
-    public AudioClip clip;
+    private int currentClipIndex = 0;
 
     void Awake()
     {
         source = gameObject.GetComponent<AudioSource>();
     }
 
-    void Start()
-    {
-        source.clip = clip;
-    }
-
     protected void OnMVRWandButtonPressed(VRSelection iSelection)
     {
-         source.Play();
+        source.clip = clips[currentClipIndex];
+        source.Play();
+        SwitchClip();
     }
 
-    public AudioClip SwitchClip(AudioClip newClip)
+     void SwitchClip()
     {
-        AudioClip temp = clip;
-        clip = newClip;
-        return temp;
+        currentClipIndex++;
+        if(currentClipIndex >= clips.Count)
+        {
+            currentClipIndex = 0;
+        }
     }
 }
