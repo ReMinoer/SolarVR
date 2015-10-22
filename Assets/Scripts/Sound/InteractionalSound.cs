@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(VRActor))]
 [RequireComponent(typeof(AudioSource))]
-
-public class InterctionalSound : MonoBehaviour {
+public class InteractionalSound : MonoBehaviour {
 
     private AudioSource source;
     public AudioClip clip;
@@ -21,6 +19,13 @@ public class InterctionalSound : MonoBehaviour {
 
     protected void OnMVRWandButtonPressed(VRSelection iSelection)
     {
-        source.Play();
+         source.Play();
+    }
+
+    public AudioClip SwitchClip(AudioClip newClip)
+    {
+        AudioClip temp = clip;
+        clip = newClip;
+        return temp;
     }
 }
