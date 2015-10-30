@@ -16,4 +16,11 @@ public class EnvironmentalSoundTrigger : MonoBehaviour
         }
     }
 
+    void OnDrawGizmos()
+    {
+        Bounds bounds = GetComponent<BoxCollider>().bounds;
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(bounds.center, bounds.size);
+    }
+
 }
