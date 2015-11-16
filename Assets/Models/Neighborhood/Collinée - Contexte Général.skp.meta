@@ -351,6 +351,73 @@ SketchUpImporter:
     4300098: Mesh Group 147
     4300100: Mesh Group 151
     4300102: Mesh Group 156
+    6400000: //RootNode
+    6400002: Group 10
+    6400004: Group 100
+    6400006: Group 102
+    6400008: Group 104
+    6400010: Group 107
+    6400012: Group 109
+    6400014: Group 111
+    6400016: Group 113
+    6400018: Group 115
+    6400020: Group 117
+    6400022: Group 119
+    6400024: Group 12
+    6400026: Group 121
+    6400028: Group 123
+    6400030: Group 126
+    6400032: Group 128
+    6400034: Group 130
+    6400036: Group 132
+    6400038: Group 134
+    6400040: Group 136
+    6400042: Group 138
+    6400044: Group 14
+    6400046: Group 141
+    6400048: Group 143
+    6400050: Group 145
+    6400052: Group 147
+    6400054: Group 151
+    6400056: Group 156
+    6400058: Group 16
+    6400060: Group 18
+    6400062: Group 2
+    6400064: Group 20
+    6400066: Group 22
+    6400068: Group 24
+    6400070: Group 26
+    6400072: Group 28
+    6400074: Group 30
+    6400076: Group 32
+    6400078: Group 34
+    6400080: Group 36
+    6400082: Group 38
+    6400084: Group 4
+    6400086: Group 40
+    6400088: Group 42
+    6400090: Group 44
+    6400092: Group 46
+    6400094: Group 48
+    6400096: Group 50
+    6400098: Group 52
+    6400100: Group 54
+    6400102: Group 56
+    6400104: Group 58
+    6400106: Group 60
+    6400108: Group 62
+    6400110: Group 66
+    6400112: Group 68
+    6400114: Group 70
+    6400116: Group 72
+    6400118: Group 74
+    6400120: Group 76
+    6400122: Group 78
+    6400124: Group 8
+    6400126: Group 80
+    6400128: Group 82
+    6400130: Group 86
+    6400132: Group 90
   materials:
     importMaterials: 1
     materialName: 2
@@ -376,7 +443,7 @@ SketchUpImporter:
     lODScreenPercentages: []
     globalScale: .0253999997
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
