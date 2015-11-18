@@ -21,7 +21,9 @@ public class GhostDoorManager : MonoBehaviour
             if (Ignored.Contains(door))
                 continue;
 
-            child.gameObject.AddComponent<GhostDoor>();
+            door.AddComponent<GhostDoor>();
+            foreach (MeshCollider meshCollider in door.GetComponentsInChildren<MeshCollider>())
+                meshCollider.enabled = false;
         }
     }
 }
