@@ -15,8 +15,8 @@ SketchUpImporter:
   fileUnit: 0
   sketchUpImportData:
     defaultCamera:
-      position: {x: 171.527145, y: 89.0273514, z: -134.971527}
-      lookAt: {x: -186.373627, y: -321.969299, z: 465.546509}
+      position: {x: 190.395142, y: 98.8203659, z: -149.818405}
+      lookAt: {x: -206.874741, y: -357.385956, z: 516.756653}
       up: {x: -.259466469, y: .862056911, z: .43535617}
       fov: 35
       aspectRatio: 0
@@ -441,7 +441,7 @@ SketchUpImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .0253999997
+    globalScale: .0304800011
     meshCompression: 0
     addColliders: 1
     importBlendShapes: 1
