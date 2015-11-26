@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &430221449 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109870, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
+  m_PrefabInternal: {fileID: 1133910567}
 --- !u!1 &532790493
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +149,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &625605736 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109890, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
+  m_PrefabInternal: {fileID: 1133910567}
+--- !u!1 &690543413 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109926, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
+  m_PrefabInternal: {fileID: 1133910567}
 --- !u!1001 &756622967
 Prefab:
   m_ObjectHideFlags: 0
@@ -215,6 +227,10 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 03e07b68bd23f264186709f81361b2da, type: 3}
   m_PrefabInternal: {fileID: 1560972946}
+--- !u!1 &977402550 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109846, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
+  m_PrefabInternal: {fileID: 1133910567}
 --- !u!1001 &1133910567
 Prefab:
   m_ObjectHideFlags: 0
@@ -401,6 +417,18 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
   m_PrefabInternal: {fileID: 1133910567}
+--- !u!1 &1876224657 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109872, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
+  m_PrefabInternal: {fileID: 1133910567}
+--- !u!1 &1895492985 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109910, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
+  m_PrefabInternal: {fileID: 1133910567}
+--- !u!1 &2111877667 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109924, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
+  m_PrefabInternal: {fileID: 1133910567}
 --- !u!1 &2120780488
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,4 +471,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorsRootNode: {fileID: 876455346}
-  Ignored: []
+  IgnoredDoors:
+  - {fileID: 977402550}
+  - {fileID: 430221449}
+  - {fileID: 1876224657}
+  - {fileID: 625605736}
+  - {fileID: 1895492985}
+  - {fileID: 2111877667}
+  - {fileID: 690543413}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  IgnoredMaterials:
+  - {fileID: 2100000, guid: 0b9e95d8bf89e70439a9731d0171809b, type: 2}
