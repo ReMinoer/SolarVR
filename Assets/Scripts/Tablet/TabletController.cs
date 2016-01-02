@@ -4,19 +4,19 @@ public class TabletController : MonoBehaviour
 {
     public MaterialInfoDictionary Dictionary;
     public TabletView View;
-    public string WandNodeName = "HandNode";
+    public string HeadNodeName = "HeadNode";
 
     private Material _currentMaterial;
-    private GameObject _wand;
+    private GameObject _head;
 
     void Start()
     {
-        _wand = GameObject.Find(WandNodeName);
+        _head = GameObject.Find(HeadNodeName);
     }
 
     void Update()
     {
-        var ray = new Ray(_wand.transform.position, _wand.transform.forward);
+        var ray = new Ray(_head.transform.position, _head.transform.forward);
 
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
@@ -29,7 +29,7 @@ public class TabletController : MonoBehaviour
                     MaterialInfo materialInfo = Dictionary[materialRenderer.material];
                     if (materialInfo != null)
                     {
-                        View.ShowMaterialInfo(materialInfo);
+                        View.ShowMaterialInfo(materialRenderer.material, materialInfo);
                         _currentMaterial = materialRenderer.material;
                         return;
                     }

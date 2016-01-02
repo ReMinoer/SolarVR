@@ -18,9 +18,11 @@ public class TabletView : MonoBehaviour
         };
     }
 
-    public void ShowMaterialInfo(MaterialInfo info)
+    public void ShowMaterialInfo(Material material, MaterialInfo info)
     {
+        MaterialScreen.Material = material;
         MaterialScreen.MaterialInfo = info;
+
         ChangeScreen(MaterialScreen);
     }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Xml.Serialization;
 using UnityEngine;
 
 [Serializable]
@@ -7,7 +8,13 @@ public class MaterialInfoDictionary : MonoBehaviour
 {
     public MaterialInfo this[Material material]
     {
-        get { return MaterialInfos.FirstOrDefault(x => x.Material.mainTexture == material.mainTexture); }
+        get
+        {
+            if (material == null || material.mainTexture == null)
+                return null;
+
+            return MaterialInfos.FirstOrDefault(x => x.Filename == material.mainTexture.name.Replace("(Instance)","").Trim());
+        }
     }
 
     public MaterialInfo[] MaterialInfos;
@@ -16,12 +23,11 @@ public class MaterialInfoDictionary : MonoBehaviour
 [Serializable]
 public class MaterialInfo
 {
-    public Material Material;
+    public string Filename;
     public string Name;
 
     [Multiline]
     public string Description;
 
-    [Multiline]
-    public string Advantages;
+    public string[] Advantages;
 }

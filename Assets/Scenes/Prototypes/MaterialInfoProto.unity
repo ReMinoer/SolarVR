@@ -843,6 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaterialInfos:
-  - Material: {fileID: 2100000, guid: 28ae23a45aee0d447bca8c53ff1f319f, type: 2}
+  - Filename: Pierre 5_0_0
     Name: Pierre
     Description: "Age : de pierre\nDeuxi\xE8me pr\xE9nom : Pierre"
+    Advantages: []

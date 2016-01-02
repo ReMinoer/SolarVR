@@ -179,9 +179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '+ C''est du solide
-
-    + Super isolant'
+  m_Text: "+ Pas ch\xE8re\n+ On en trouve partout"
 --- !u!222 &401026434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -575,7 +573,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Un beau bois qui ravira petits et grands.
+  m_Text: 'Des cailloux.
+
+    Mes mortels ennemis.'
 --- !u!222 &818606454
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -604,7 +604,6 @@ GameObject:
   - 224: {fileID: 1131937454}
   - 222: {fileID: 1131937457}
   - 114: {fileID: 1131937456}
-  - 114: {fileID: 1131937455}
   m_Layer: 5
   m_Name: NameText
   m_TagString: Untagged
@@ -629,20 +628,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -10}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1131937455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1131937453}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!114 &1131937456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,17 +649,19 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bois d'acajou
+  m_Text: 'Pierre
+
+'
 --- !u!222 &1131937457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -885,16 +872,16 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 1
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 2.5
+  m_DynamicPixelsPerUnit: 2.70000005
 --- !u!223 &1451029762
 Canvas:
   m_ObjectHideFlags: 0
@@ -979,7 +966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dictionary: {fileID: 2120780491}
   View: {fileID: 1451029759}
-  WandNodeName: HandNode
+  HeadNodeName: HeadNode
 --- !u!1001 &1606818186
 Prefab:
   m_ObjectHideFlags: 0
@@ -1177,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: ed8b15aa6b54b5e4596d326b5d772753, type: 2}
+  m_Material: {fileID: 2100000, guid: 28ae23a45aee0d447bca8c53ff1f319f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -1264,7 +1251,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Appuyez sur <b>B</b> pour analyser les mat\xE9riaux."
+  m_Text: "Appuyez sur <b>B</b> pour analyser les mat\xE9riaux.\n\n"
 --- !u!222 &1745126748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1351,9 +1338,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaterialInfos:
-  - Material: {fileID: 2100000, guid: 28ae23a45aee0d447bca8c53ff1f319f, type: 2}
+  - Filename: Pierre 5_0_0
     Name: Pierre
     Description: 'Des cailloux.
 
       Mes mortels ennemis.'
-    Advantages: "+ On en trouve partout\n+ Pas ch\xE8re"
+    Advantages:
+    - "Pas ch\xE8re"
+    - On en trouve partout
