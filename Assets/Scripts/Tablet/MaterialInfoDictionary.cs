@@ -21,4 +21,7 @@ public class MaterialInfo
 
     [Multiline]
     public string Description;
+
+    [Multiline]
+    public string Advantages;
 }

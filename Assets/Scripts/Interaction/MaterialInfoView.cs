@@ -25,6 +25,7 @@ public class MaterialInfoView : MonoBehaviour
 
     public void Hide()
     {
+        Text.text = "";
         gameObject.SetActive(false);
     }
 }
