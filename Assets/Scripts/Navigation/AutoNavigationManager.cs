@@ -30,7 +30,7 @@ public class AutoNavigationManager : MonoBehaviour {
     {
         if (Input.GetKeyDown("a"))
         {
-            autoEnable = !autoEnable;
+           autoEnable = !autoEnable;
            if(autoEnable)
             {
                 ActivateAutoNavigation();
@@ -70,7 +70,6 @@ public class AutoNavigationManager : MonoBehaviour {
         }
         adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
         BlinkToCloserKeyPoint();
-        pathName = closerKeyPoint.pointName;
     }
 
     private void BlinkToCloserKeyPoint()
@@ -96,7 +95,6 @@ public class AutoNavigationManager : MonoBehaviour {
             }
         }
         pathName = StartPositionName + '-' + EndPositionName;
-        Debug.Log(pathName);
-        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName), "time", 10));
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName), "speed", 1.5));
     }
 }
