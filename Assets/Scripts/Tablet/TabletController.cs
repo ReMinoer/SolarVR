@@ -38,6 +38,7 @@ public class TabletController : MonoBehaviour
                 if (_currentMaterial != null && _currentMaterial.mainTexture != materialRenderer.material.mainTexture)
                 {
                     View.BackToDefault();
+                    _currentMaterial = null;
                 }
             }
         }
