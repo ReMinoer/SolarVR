@@ -5,4 +5,15 @@ public class NavigationKeyPoint : MonoBehaviour
 {
     public List<NavigationKeyPoint> adjacentsKeyPoints;
     public string pointName;
+
+    public void Details()
+    {
+        Debug.Log(pointName);
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawCube(transform.position, new Vector3(0.5f,0.5f,0.5f));
+    }
 }
