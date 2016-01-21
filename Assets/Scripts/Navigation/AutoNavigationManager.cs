@@ -1,12 +1,7 @@
 ﻿using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(FirstPersonController))]
-
 public class AutoNavigationManager : MonoBehaviour {
-
-    private FirstPersonController manualNavigation;
 
     private string pathName;
     public List<NavigationKeyPoint> keyPoints;
@@ -15,11 +10,6 @@ public class AutoNavigationManager : MonoBehaviour {
 
     private bool autoEnable = false;
     private bool isWalking = false;
-
-    void Awake()
-    {
-        manualNavigation = GetComponent<FirstPersonController>();
-    }
 
     void Start()
     {
