@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public class TabletView : MonoBehaviour
 {
-    public TabletScreen DefaultScreen;
+    public MapScreen MapScreen;
     public MaterialScreen MaterialScreen;
     private IList<ITabletScreen> _screens;
 
@@ -13,7 +13,7 @@ public class TabletView : MonoBehaviour
     {
         _screens = new List<ITabletScreen>
         {
-            DefaultScreen,
+            MapScreen,
             MaterialScreen
         };
     }
@@ -28,7 +28,7 @@ public class TabletView : MonoBehaviour
 
     public void BackToDefault()
     {
-        ChangeScreen(DefaultScreen);
+        ChangeScreen(MapScreen);
     }
 
     private void ChangeScreen(ITabletScreen screen)

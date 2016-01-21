@@ -1,62 +1,106 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
-using System.Collections;
 using System.Collections.Generic;
 
 public class AutoNavigationManager : MonoBehaviour {
 
-    public List<GameObject> targets;
-    private Transform currentTarget;
-    private int targetIndice;
+    private string pathName;
+    public List<NavigationKeyPoint> keyPoints;
+    private NavigationKeyPoint closerKeyPoint;
+    private List<NavigationKeyPoint> adjacentsKeyPoints;
 
-    private bool targetReach;
-    private NavMeshAgent agent;
+    private bool autoEnable = false;
+    private bool isWalking = false;
 
-    // Use this for initialization
-    void Awake()
+    void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        closerKeyPoint = keyPoints[0];
+        adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
     }
 
-    // Use this for initialization
-    void Start ()
+    void Update()
     {
-        targetIndice = 0;
-        targetReach = true;
+        if (Input.GetKeyDown("a"))
+        {
+           autoEnable = !autoEnable;
+           if(autoEnable)
+            {
+                ActivateAutoNavigation();
+            }
+            else
+            {
+                ActivateManualNavigation();
+            }
+        }
+        if (Input.GetKeyDown("space"))
+        {
+            if(autoEnable)
+            {
+                ChoosePath();
+            }
+        }
+        if(autoEnable && !isWalking)
+        {
+            NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
+            nextKeyPoint.Details();
+        }
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void ActivateManualNavigation()
     {
-        if (targetReach)
-            OnNewTarget();
-            
-        float distance = Vector3.Distance(transform.position, currentTarget.position);
-        if (distance < 2f)
-            OnTargetReached();
+        iTween.Stop(gameObject);
     }
 
-    void OnTargetReached()
+    private void ActivateAutoNavigation()
     {
-        Debug.Log("TargetReach");
-        agent.Stop();
-        targetReach = true;
+        Vector3 position = transform.position;
+        float distance = Vector3.Distance(closerKeyPoint.transform.position, position);
+        
+        for (int i = 0; i < keyPoints.Count; i++)
+        {
+            float newDistance = Vector3.Distance(keyPoints[i].transform.position, position);
+            if (newDistance < distance)
+            {
+                distance = newDistance;
+                closerKeyPoint = keyPoints[i];
+            }
+        }
+        adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
+        BlinkToCloserKeyPoint();
     }
 
-    void OnNewTarget()
+    private void BlinkToCloserKeyPoint()
     {
-        Debug.Log("NewTarget");
-        if (targetIndice >= targets.Count-1)
-            targetIndice = 0;
-        else
-            targetIndice++;
-        Debug.Log(targetIndice);
+        transform.position = closerKeyPoint.transform.position;
+    }
 
-        currentTarget = targets[targetIndice].transform;
-        agent.SetDestination(currentTarget.position);
-        agent.Resume();
+    private void ChoosePath()
+    {
+        NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
+        string StartPositionName = closerKeyPoint.pointName;
+        
+        pathName = StartPositionName + '-' + nextKeyPoint.pointName;
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName), "speed", 1.5));
 
-        targetReach = false;
-        agent.gameObject.SetActive(true);
+        closerKeyPoint = nextKeyPoint;
+        adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
+    }
+
+    private NavigationKeyPoint ClosestKeypoint()
+    {
+        Vector3 pathDirection = transform.position + transform.forward * 15.0f; // Pas sûr du tout
+        float distance = Vector3.Distance(pathDirection, adjacentsKeyPoints[0].transform.position);
+
+        NavigationKeyPoint nextKeyPoint = adjacentsKeyPoints[0];
+
+        for (int i = 0; i < adjacentsKeyPoints.Count; i++)
+        {
+            float newDistance = Vector3.Distance(pathDirection, adjacentsKeyPoints[i].transform.position);
+            if (newDistance < distance)
+            {
+                nextKeyPoint = adjacentsKeyPoints[i];
+                distance = newDistance;
+            }
+        }
+        return nextKeyPoint;
     }
 }

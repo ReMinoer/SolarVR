@@ -17,7 +17,7 @@ public class MaterialInfoController : MonoBehaviour
 	void Update ()
     {
         var ray = new Ray(_wand.transform.position, _wand.transform.forward);
-	        
+	    
         RaycastHit hit;
 	    if (Physics.Raycast(ray, out hit))
 	    {
