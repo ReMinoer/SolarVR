@@ -3,6 +3,7 @@
 public class TabletController : MonoBehaviour
 {
     public MaterialInfoDictionary Dictionary;
+    public GameObject Tablet;
     public TabletView View;
     public string HeadNodeName = "HeadNode";
 
@@ -12,6 +13,13 @@ public class TabletController : MonoBehaviour
     void Start()
     {
         _head = GameObject.Find(HeadNodeName);
+
+        if (!(GetConfigFilename() == "Assets/default.vrx"
+            || GetConfigFilename() == "Assets/gamepad.vrx"))
+        {
+            Tablet.transform.localPosition = 0.25f * Vector3.forward;
+            Tablet.transform.localRotation = Quaternion.AngleAxis(90, Vector3.right);
+        }
     }
 
     void Update()
@@ -42,5 +50,27 @@ public class TabletController : MonoBehaviour
                 }
             }
         }
+    }
+
+    private string GetConfigFilename()
+    {
+        string configFileName = GameObject.Find("VRManager").GetComponent<VRManagerScript>().ConfigFile;
+        bool nextArgIsConfigFile = false;
+        for (uint i = 0, iEnd = MiddleVR.VRKernel.GetCommandLineArgumentsNb(); i < iEnd; ++i)
+        {
+            string cmdLineArg = MiddleVR.VRKernel.GetCommandLineArgument(i);
+
+            if (cmdLineArg == "--config")
+            {
+                nextArgIsConfigFile = true;
+            }
+            else if (nextArgIsConfigFile)
+            {
+                configFileName = cmdLineArg;
+                nextArgIsConfigFile = false;
+            }
+        }
+
+        return configFileName;
     }
 }
