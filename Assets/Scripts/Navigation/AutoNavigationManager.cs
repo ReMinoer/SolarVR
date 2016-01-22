@@ -19,7 +19,7 @@ public class AutoNavigationManager : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown("a"))
+        if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(1))
         {
            autoEnable = !autoEnable;
            if(autoEnable)
@@ -31,7 +31,7 @@ public class AutoNavigationManager : MonoBehaviour {
                 ActivateManualNavigation();
             }
         }
-        if (Input.GetKeyDown("space"))
+        if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(2))
         {
             if(autoEnable)
             {
@@ -79,7 +79,7 @@ public class AutoNavigationManager : MonoBehaviour {
         string StartPositionName = closerKeyPoint.pointName;
         
         pathName = StartPositionName + '-' + nextKeyPoint.pointName;
-        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName), "speed", 1.5));
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName),"easetype", iTween.EaseType.linear, "speed", 3, "onstart", "SartWalking","oncomplete","StopWalking"));
 
         closerKeyPoint = nextKeyPoint;
         adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
@@ -87,7 +87,7 @@ public class AutoNavigationManager : MonoBehaviour {
 
     private NavigationKeyPoint ClosestKeypoint()
     {
-        Vector3 pathDirection = transform.position + transform.forward * 15.0f; // Pas sûr du tout
+        Vector3 pathDirection = transform.position + transform.forward * 15.0f;
         float distance = Vector3.Distance(pathDirection, adjacentsKeyPoints[0].transform.position);
 
         NavigationKeyPoint nextKeyPoint = adjacentsKeyPoints[0];
@@ -102,5 +102,15 @@ public class AutoNavigationManager : MonoBehaviour {
             }
         }
         return nextKeyPoint;
+    }
+
+    void StopWalking()
+    {
+        isWalking = false;
+    }
+
+    void StartWalking()
+    {
+        isWalking = true;
     }
 }
