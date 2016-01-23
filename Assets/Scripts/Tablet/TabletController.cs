@@ -5,6 +5,7 @@ public class TabletController : MonoBehaviour
     public MaterialInfoDictionary Dictionary;
     public GameObject Tablet;
     public TabletView View;
+    public GameObject MaterialCursor;
     public string HeadNodeName = "HeadNode";
 
     private Material _currentMaterial;
@@ -12,6 +13,8 @@ public class TabletController : MonoBehaviour
 
     void Start()
     {
+        MaterialCursor.SetActive(false);
+
         _head = GameObject.Find(HeadNodeName);
 
         if (!(GetConfigFilename() == "Assets/default.vrx"
@@ -39,6 +42,11 @@ public class TabletController : MonoBehaviour
                     {
                         View.ShowMaterialInfo(materialRenderer.material, materialInfo);
                         _currentMaterial = materialRenderer.material;
+
+                        MaterialCursor.SetActive(true);
+                        MaterialCursor.transform.position = hit.point + hit.normal * 0.01f;
+                        MaterialCursor.transform.rotation = Quaternion.LookRotation(hit.normal);
+
                         return;
                     }
                 }
@@ -47,6 +55,8 @@ public class TabletController : MonoBehaviour
                 {
                     View.BackToDefault();
                     _currentMaterial = null;
+
+                    MaterialCursor.gameObject.SetActive(false);
                 }
             }
         }
