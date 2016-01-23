@@ -3,7 +3,7 @@
 	<Kernel LogLevel="2" LogInSimulationFolder="0" EnableCrashHandler="0" Version="1.6.1.f6" />
 	<DeviceManager>
 		<Driver Type="vrDriverDirectInput" />
-		<Wand Name="Wand0" Driver="0" Axis="Controller (XBOX 360 For Windows).Axis" HorizontalAxis="0" HorizontalAxisScale="1" VerticalAxis="1" VerticalAxisScale="-1" AxisDeadZone="0.3" Buttons="Controller (XBOX 360 For Windows).Buttons" Button0="0" Button1="1" Button2="2" Button3="3" Button4="4" Button5="5" />
+		<Wand Name="Wand0" Driver="0" Axis="Controller (XBOX 360 For Windows).Axis" HorizontalAxis="0" HorizontalAxisScale="1" VerticalAxis="1" VerticalAxisScale="-1" AxisDeadZone="0.3" Buttons="Controller (XBOX 360 For Windows).Buttons" Button0="0" Button1="1" Button2="5" Button3="2" Button4="3" Button5="4" />
 	</DeviceManager>
 	<DisplayManager Fullscreen="0" AlwaysOnTop="1" WindowBorders="0" ShowMouseCursor="1" VSync="0" GraphicsRenderer="1" AntiAliasing="0" ForceHideTaskbar="0" SaveRenderTarget="0" ChangeWorldScale="0" WorldScale="1">
 		<Node3D Name="VRSystemCenterNode" Tag="VRSystemCenter" Parent="None" Tracker="0" IsFiltered="0" Filter="0" PositionLocal="0.000000,0.000000,0.000000" OrientationLocal="0.000000,0.000000,0.000000,1.000000" />
