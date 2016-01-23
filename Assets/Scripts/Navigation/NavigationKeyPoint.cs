@@ -6,12 +6,10 @@ public class NavigationKeyPoint : MonoBehaviour
 {
     public List<NavigationKeyPoint> adjacentsKeyPoints;
     public string pointName;
-    public Text detailDisplayer;
 
-    public void Details()
+    public void Details(Text displayer)
     {
-        detailDisplayer.text = pointName;
-        Debug.Log(pointName);
+        displayer.text = pointName;
     }
 
     void OnDrawGizmos()

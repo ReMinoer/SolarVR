@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class AutoNavigationManager : MonoBehaviour {
@@ -11,47 +12,57 @@ public class AutoNavigationManager : MonoBehaviour {
     private bool autoEnable = false;
     private bool isWalking = false;
 
+    public Text displayer;
     void Start()
     {
         closerKeyPoint = keyPoints[0];
         adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
+        displayer.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(1))
+        Debug.Log(isWalking);
+        if(!isWalking)
         {
-           autoEnable = !autoEnable;
-           if(autoEnable)
+            if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(1))
             {
-                ActivateAutoNavigation();
+                autoEnable = !autoEnable;
+                if (autoEnable)
+                {
+                    ActivateAutoNavigation();
+                }
+                else
+                {
+                    ActivateManualNavigation();
+                }
             }
-            else
+            if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(2))
             {
-                ActivateManualNavigation();
+                if (autoEnable)
+                {
+                    Debug.Log("PathChosen");
+                    ChoosePath();
+                }
+            }
+            if (autoEnable)
+            {
+                NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
+                nextKeyPoint.Details(displayer);
             }
         }
-        if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(2))
-        {
-            if(autoEnable)
-            {
-                ChoosePath();
-            }
-        }
-        if(autoEnable && !isWalking)
-        {
-            NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
-            nextKeyPoint.Details();
-        }
+        
     }
 
     private void ActivateManualNavigation()
     {
+        displayer.gameObject.SetActive(false);
         iTween.Stop(gameObject);
     }
 
     private void ActivateAutoNavigation()
     {
+        displayer.gameObject.SetActive(true);
         Vector3 position = transform.position;
         float distance = Vector3.Distance(closerKeyPoint.transform.position, position);
         
@@ -79,7 +90,7 @@ public class AutoNavigationManager : MonoBehaviour {
         string StartPositionName = closerKeyPoint.pointName;
         
         pathName = StartPositionName + '-' + nextKeyPoint.pointName;
-        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName),"easetype", iTween.EaseType.linear, "speed", 3, "onstart", "SartWalking","oncomplete","StopWalking"));
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName),"easetype", iTween.EaseType.linear, "speed", 3, "onstart", "StartWalking","oncomplete","StopWalking"));
 
         closerKeyPoint = nextKeyPoint;
         adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
@@ -107,10 +118,12 @@ public class AutoNavigationManager : MonoBehaviour {
     void StopWalking()
     {
         isWalking = false;
+        displayer.gameObject.SetActive(true);
     }
 
     void StartWalking()
     {
+        displayer.gameObject.SetActive(false);
         isWalking = true;
     }
 }
