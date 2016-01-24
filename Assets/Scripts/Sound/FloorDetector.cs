@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 
 public class FloorDetector : MonoBehaviour {
 
@@ -24,8 +24,9 @@ public class FloorDetector : MonoBehaviour {
             if (other.gameObject.GetComponent<Renderer>().material.mainTexture == ground.Texture && Ground == null)
             {
                 Ground = ground;
+                Debug.Log(Ground.Texture.ToString());
                 _currentCollider = other;
-                gameObject.GetComponent<FirstPersonController>().SetFootstepSounds(Ground.ArrayAudioClip);
+                gameObject.GetComponent<MovesoundConnector>().SetFootstepSounds(Ground.ArrayAudioClip);
                 return;
             }
     }
