@@ -4,26 +4,35 @@ using UnityEngine;
 
 public class GhostDoor : MonoBehaviour
 {
+    public Material[] IgnoredMaterials;
     public float NearDistance = 1.5f;
     public float FarDistance = 2.5f;
     public float NearAngle = 30f;
     public float FarAngle = 60f;
     private IEnumerable<Material> _materials;
+    private Vector3 _rectifiedPosition;
     private Camera _userCamera;
     private bool _wasNearEnough;
 
     void Start()
     {
+        _rectifiedPosition = Vector3.zero;
+        foreach (Transform child in transform)
+            _rectifiedPosition += child.position;
+        _rectifiedPosition /= transform.childCount;
+
         _userCamera = Camera.allCameras.First();
-        _materials = GetComponentsInChildren<Renderer>().Select(x => x.material);
+
+        _materials = GetComponentsInChildren<Renderer>()
+            .Select(x => x.material).Where(x => IgnoredMaterials.All(y => x.mainTexture != y.mainTexture)).ToArray();
     }
 	
 	void Update()
 	{
-        Vector3 distance = transform.position - _userCamera.transform.position;
+        Vector3 distance = _rectifiedPosition - _userCamera.transform.position;
 
 	    bool isNearEnough = distance.magnitude <= FarDistance;
-	    if (_wasNearEnough == false && isNearEnough != _wasNearEnough)
+	    if (!_wasNearEnough || isNearEnough != _wasNearEnough)
 	    {
 	        _wasNearEnough = isNearEnough;
 	        return;
