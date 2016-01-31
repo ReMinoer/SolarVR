@@ -108,9 +108,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 80957158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.8659973, y: -2.32500005, z: 40.9669991}
+  m_LocalPosition: {x: -86.8659973, y: -2.01799989, z: 40.9669991}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2068869319}
+  - {fileID: 834972151}
   m_Father: {fileID: 1250271304}
   m_RootOrder: 6
 --- !u!114 &80957160
@@ -125,8 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentsKeyPoints:
-  - {fileID: 0}
-  pointName: 1
+  - {fileID: 1615595203}
+  - {fileID: 1365315362}
+  pointName: 8
 --- !u!1 &99150168
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 99150168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.435997, y: 0, z: -1.26100063}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 961835354}
@@ -166,12 +169,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: 2-3
+  pathName: 3-2
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -90.7559967, y: -2.70000005, z: 16.1380005}
-  - {x: -87.720932, y: -2.70000005, z: 16.254364}
-  - {x: -85.0009995, y: -2.70000005, z: 17.0569992}
+  - {x: -90.7559967, y: -2.59599996, z: 16.1380005}
+  - {x: -87.720932, y: -2.59599996, z: 16.254364}
+  - {x: -85.0009995, y: -2.59599996, z: 17.0569992}
   nodeCount: 3
   initialized: 1
   initialName: New Path 1
@@ -198,7 +201,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101114260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.68099976, y: 0, z: -2.17999935}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 767602027}
@@ -217,8 +220,8 @@ MonoBehaviour:
   pathName: 2-5
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -85.0009995, y: -2.70000005, z: 17.0569992}
-  - {x: -86.1277695, y: -2.70000005, z: 20.5735416}
+  - {x: -85.0009995, y: -2.59599996, z: 17.0569992}
+  - {x: -86.1277695, y: -2.59599996, z: 20.5735416}
   - {x: -86.0376511, y: -2.01799989, z: 21.374897}
   - {x: -86.4960022, y: -2.01799989, z: 28.3050003}
   nodeCount: 4
@@ -252,6 +255,7 @@ Transform:
   m_Children:
   - {fileID: 255359078}
   - {fileID: 643031970}
+  - {fileID: 1948575261}
   m_Father: {fileID: 1250271304}
   m_RootOrder: 4
 --- !u!114 &138584798
@@ -268,6 +272,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 767602026}
   - {fileID: 1808479382}
+  - {fileID: 1615595203}
   pointName: 5
 --- !u!1 &141255960
 GameObject:
@@ -340,7 +345,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 219901824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.435997, y: 0, z: -1.26100063}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 961835354}
@@ -359,9 +364,9 @@ MonoBehaviour:
   pathName: 3-1
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -90.7559967, y: -2.70000005, z: 16.1380005}
-  - {x: -86.5623169, y: -2.70000005, z: 15.4551353}
-  - {x: -78.3199997, y: -2.70000005, z: 14.8769999}
+  - {x: -90.7559967, y: -2.59599996, z: 16.1380005}
+  - {x: -86.5623169, y: -2.59599996, z: 15.4551353}
+  - {x: -78.3199997, y: -3.00256109, z: 14.2647657}
   nodeCount: 3
   initialized: 1
   initialName: New Path 1
@@ -388,7 +393,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255359077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.1760025, y: -.68200016, z: -13.4280005}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 138584797}
@@ -409,8 +414,8 @@ MonoBehaviour:
   nodes:
   - {x: -86.4960022, y: -2.01799989, z: 28.3050003}
   - {x: -86.1224823, y: -2.01799989, z: 22.3609123}
-  - {x: -86.1645889, y: -2.71753812, z: 20.8732986}
-  - {x: -85.0009995, y: -2.70000005, z: 17.0569992}
+  - {x: -86.1645889, y: -2.59599996, z: 20.8732986}
+  - {x: -85.0009995, y: -2.59599996, z: 17.0569992}
   nodeCount: 4
   initialized: 1
   initialName: New Path 1
@@ -564,8 +569,8 @@ MonoBehaviour:
   pathName: 4-1
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -78.3199997, y: -3.7055285, z: 32.2200012}
-  - {x: -80.0436249, y: -2.01799989, z: 32.117775}
+  - {x: -78.3199997, y: -3.03685403, z: 32.2200012}
+  - {x: -78.3199997, y: -3.00256109, z: 14.8769999}
   nodeCount: 2
   initialized: 1
   initialName: New Path 1
@@ -623,6 +628,102 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 0}
   pointName: 1
+--- !u!1 &457709629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 457709630}
+  - 114: {fileID: 457709631}
+  m_Layer: 0
+  m_Name: Path 9-7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &457709630
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457709629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1365315361}
+  m_RootOrder: 0
+--- !u!114 &457709631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457709629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 9-7
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -81.9670029, y: -2.01799989, z: 40.5019989}
+  - {x: -81.6147232, y: -2.01799989, z: 37.6232605}
+  - {x: -82.5400009, y: -2.01799989, z: 35.8400002}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
+--- !u!1 &523784807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 523784808}
+  - 114: {fileID: 523784809}
+  m_Layer: 0
+  m_Name: Path 7-9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &523784808
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523784807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1615595202}
+  m_RootOrder: 3
+--- !u!114 &523784809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523784807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 7-9
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -82.5400009, y: -2.01799989, z: 35.8400002}
+  - {x: -81.9129486, y: -2.01799989, z: 37.6232605}
+  - {x: -81.9670029, y: -2.01799989, z: 40.5019989}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &532790493
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +807,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 623832078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -78.3199997, y: -2.70000005, z: 14.8769999}
+  m_LocalPosition: {x: -78.3199997, y: -3.00256109, z: 14.8769999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1209427980}
@@ -730,6 +831,56 @@ MonoBehaviour:
   - {fileID: 961835355}
   - {fileID: 1808479382}
   pointName: 1
+--- !u!1 &641406073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 641406074}
+  - 114: {fileID: 641406075}
+  m_Layer: 0
+  m_Name: Path 7-5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641406074
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641406073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1615595202}
+  m_RootOrder: 0
+--- !u!114 &641406075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641406073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 7-5
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -82.5400009, y: -2.01799989, z: 35.8400002}
+  - {x: -82.5065765, y: -2.01799989, z: 32.8565292}
+  - {x: -84.0940399, y: -2.01799989, z: 32.2304497}
+  - {x: -85.0596771, y: -2.01799989, z: 30.4742298}
+  - {x: -86.4960022, y: -2.01799989, z: 28.3050003}
+  nodeCount: 5
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &643031969
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +904,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643031969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.1760025, y: -.68200016, z: 3.91500092}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 138584797}
@@ -776,7 +927,7 @@ MonoBehaviour:
   - {x: -85.0596771, y: -2.01799989, z: 30.4742298}
   - {x: -84.0940399, y: -2.01799989, z: 32.2304497}
   - {x: -79.8797379, y: -2.01799989, z: 32.2304497}
-  - {x: -78.3199997, y: -2.70000005, z: 32.2200012}
+  - {x: -78.3199997, y: -3.00256109, z: 32.2200012}
   nodeCount: 5
   initialized: 1
   initialName: New Path 1
@@ -819,7 +970,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 767602025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -85.0009995, y: -2.70000005, z: 17.0569992}
+  m_LocalPosition: {x: -85.0009995, y: -2.59599996, z: 17.0569992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1093454993}
@@ -869,6 +1020,55 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 0}
   pointName: 1
+--- !u!1 &834972150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 834972151}
+  - 114: {fileID: 834972152}
+  m_Layer: 0
+  m_Name: Path 8-9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &834972151
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 834972150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 80957159}
+  m_RootOrder: 1
+--- !u!114 &834972152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 834972150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 8-9
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -86.8659973, y: -2.01799989, z: 40.9669991}
+  - {x: -85.9017563, y: -2.01799989, z: 38.6287689}
+  - {x: -82.0954971, y: -2.01799989, z: 37.6503792}
+  - {x: -81.9670029, y: -2.01799989, z: 40.5019989}
+  nodeCount: 4
+  initialized: 1
+  initialName: New Path 1
 --- !u!4 &923993378 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 03e07b68bd23f264186709f81361b2da, type: 3}
@@ -896,11 +1096,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 961835353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -90.7559967, y: -2.70000005, z: 16.1380005}
+  m_LocalPosition: {x: -90.7559967, y: -2.59599996, z: 16.1380005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 219901825}
   - {fileID: 99150169}
+  - {fileID: 1848055435}
   m_Father: {fileID: 1250271304}
   m_RootOrder: 2
 --- !u!114 &961835355
@@ -916,6 +1117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adjacentsKeyPoints:
   - {fileID: 623832080}
+  - {fileID: 767602026}
   - {fileID: 767602026}
   pointName: 3
 --- !u!1 &1093454992
@@ -941,7 +1143,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1093454992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.68099976, y: 0, z: -2.17999935}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 767602027}
@@ -960,9 +1162,9 @@ MonoBehaviour:
   pathName: 2-1
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -85.0009995, y: -2.70000005, z: 17.0569992}
-  - {x: -83.7608643, y: -2.70000005, z: 15.3505754}
-  - {x: -78.3199997, y: -2.70000005, z: 14.8769999}
+  - {x: -85.0009995, y: -2.59599996, z: 17.0569992}
+  - {x: -83.7608643, y: -2.59599996, z: 15.3505754}
+  - {x: -78.3199997, y: -3.00256109, z: 14.8769999}
   nodeCount: 3
   initialized: 1
   initialName: New Path 1
@@ -1166,12 +1368,62 @@ MonoBehaviour:
   pathName: 1-2
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -78.3199997, y: -2.70000005, z: 14.8769999}
-  - {x: -83.7608643, y: -2.70000005, z: 15.3505754}
-  - {x: -85.0009995, y: -2.70000005, z: 17.0569992}
+  - {x: -78.3199997, y: -3.00256109, z: 14.8769999}
+  - {x: -83.7608643, y: -2.59599996, z: 15.3505754}
+  - {x: -85.0009995, y: -2.59599996, z: 17.0569992}
   nodeCount: 3
   initialized: 1
   initialName: New Path 1
+--- !u!1 &1235182991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1235182993}
+  - 114: {fileID: 1235182992}
+  m_Layer: 0
+  m_Name: Path 4-7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1235182992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235182991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 4-7
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -78.3199997, y: -3.00256109, z: 32.2200012}
+  - {x: -79.8797379, y: -2.15352798, z: 32.2304497}
+  - {x: -81.1660233, y: -2.01799989, z: 32.2914047}
+  - {x: -82.2879181, y: -2.01799989, z: 32.7582245}
+  - {x: -82.5400009, y: -2.01799989, z: 35.8400002}
+  nodeCount: 5
+  initialized: 1
+  initialName: New Path 1
+--- !u!4 &1235182993
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235182991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1808479381}
+  m_RootOrder: 2
 --- !u!1 &1250271303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1466,77 @@ Transform:
   - {fileID: 327619446}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1262749716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1262749719}
+  - 114: {fileID: 1262749718}
+  - 114: {fileID: 1262749717}
+  m_Layer: 0
+  m_Name: Path 9-8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1262749717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262749716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 8-9
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -86.8659973, y: -2.01799989, z: 40.9669991}
+  - {x: -85.9017563, y: -2.01799989, z: 38.6287689}
+  - {x: -82.0954971, y: -2.01799989, z: 37.6503792}
+  - {x: -81.9670029, y: -2.01799989, z: 40.5019989}
+  nodeCount: 4
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1262749718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262749716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 8-9
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -81.9670029, y: -2.01799989, z: 40.5019989}
+  - {x: -82.0954971, y: -2.01799989, z: 37.6503792}
+  - {x: -85.9017563, y: -2.01799989, z: 38.6287689}
+  - {x: -86.8659973, y: -2.01799989, z: 40.9669991}
+  nodeCount: 4
+  initialized: 1
+  initialName: New Path 1
+--- !u!4 &1262749719
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262749716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1365315361}
+  m_RootOrder: 1
 --- !u!1 &1365315360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,9 +1560,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1365315360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -81.9670029, y: -2.32500005, z: 40.5019989}
+  m_LocalPosition: {x: -81.9670029, y: -2.01799989, z: 40.5019989}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 457709630}
+  - {fileID: 1262749719}
   m_Father: {fileID: 1250271304}
   m_RootOrder: 7
 --- !u!114 &1365315362
@@ -1254,8 +1579,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentsKeyPoints:
-  - {fileID: 0}
-  pointName: 1
+  - {fileID: 80957160}
+  - {fileID: 1615595203}
+  pointName: 9
+--- !u!1 &1378122856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1378122857}
+  - 114: {fileID: 1378122858}
+  m_Layer: 0
+  m_Name: Path 7-4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378122857
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378122856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.22000122, y: -1.01885414, z: -3.61999893}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1615595202}
+  m_RootOrder: 1
+--- !u!114 &1378122858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378122856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 7-4
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -82.5400009, y: -2.01799989, z: 35.8400002}
+  - {x: -82.2879181, y: -2.01799989, z: 32.7582207}
+  - {x: -81.1660233, y: -2.01799989, z: 32.2914047}
+  - {x: -79.8797379, y: -2.15352798, z: 32.2304497}
+  - {x: -78.3199997, y: -3.00256109, z: 32.2200012}
+  nodeCount: 5
+  initialized: 1
+  initialName: New Path 1
 --- !u!1001 &1389299266
 Prefab:
   m_ObjectHideFlags: 0
@@ -1349,7 +1725,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1415313854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.68099976, y: 0, z: -2.17999935}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 767602027}
@@ -1368,9 +1744,9 @@ MonoBehaviour:
   pathName: 2-3
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -85.0009995, y: -2.70000005, z: 17.0569992}
-  - {x: -87.720932, y: -2.70000005, z: 16.254364}
-  - {x: -90.7559967, y: -2.70000005, z: 16.1380005}
+  - {x: -85.0009995, y: -2.59599996, z: 17.0569992}
+  - {x: -87.720932, y: -2.59599996, z: 16.254364}
+  - {x: -90.7559967, y: -2.59599996, z: 16.1380005}
   nodeCount: 3
   initialized: 1
   initialName: New Path 1
@@ -1416,7 +1792,7 @@ MonoBehaviour:
   pathName: 4-5
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -78.3199997, y: -2.70000005, z: 32.2200012}
+  - {x: -78.3199997, y: -3.00256109, z: 32.2200012}
   - {x: -79.8797379, y: -2.01799989, z: 32.2304497}
   - {x: -84.0940399, y: -2.01799989, z: 32.2304497}
   - {x: -85.0596848, y: -2.01799989, z: 30.4742298}
@@ -1497,9 +1873,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1585676773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -98.9029999, y: -2.70000005, z: 21.5039997}
+  m_LocalPosition: {x: -98.9029999, y: -2.59599996, z: 21.5039997}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1732848248}
   m_Father: {fileID: 1250271304}
   m_RootOrder: 3
 --- !u!114 &1585676775
@@ -1514,8 +1891,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentsKeyPoints:
-  - {fileID: 0}
-  pointName: 1
+  - {fileID: 961835355}
+  pointName: 6
 --- !u!1 &1585938755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,7 +1960,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -82.5400009, y: -2.01799989, z: 35.8400002}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 641406074}
+  - {fileID: 1378122857}
+  - {fileID: 1740920163}
+  - {fileID: 523784808}
   m_Father: {fileID: 1250271304}
   m_RootOrder: 5
 --- !u!114 &1615595203
@@ -1598,12 +1979,113 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentsKeyPoints:
-  - {fileID: 0}
-  pointName: 1
+  - {fileID: 138584798}
+  - {fileID: 1808479382}
+  - {fileID: 80957160}
+  - {fileID: 1365315362}
+  pointName: 7
 --- !u!4 &1622969219 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
   m_PrefabInternal: {fileID: 1133910567}
+--- !u!1 &1732848247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1732848248}
+  - 114: {fileID: 1732848249}
+  m_Layer: 0
+  m_Name: Path 6-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1732848248
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1732848247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1585676774}
+  m_RootOrder: 0
+--- !u!114 &1732848249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1732848247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 6-3
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -98.9029999, y: -2.59599996, z: 21.5039997}
+  - {x: -95.830864, y: -2.59599996, z: 21.0758915}
+  - {x: -95.4821472, y: -2.59599996, z: 16.545105}
+  - {x: -90.7559967, y: -2.59599996, z: 16.1380005}
+  nodeCount: 4
+  initialized: 1
+  initialName: New Path 1
+--- !u!1 &1740920162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1740920163}
+  - 114: {fileID: 1740920164}
+  m_Layer: 0
+  m_Name: Path 7-8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1740920163
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740920162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1615595202}
+  m_RootOrder: 2
+--- !u!114 &1740920164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740920162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 7-8
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -82.5400009, y: -2.01799989, z: 35.8400002}
+  - {x: -82.8027115, y: -2.01799989, z: 37.6232605}
+  - {x: -85.9017563, y: -2.01799989, z: 38.6287651}
+  - {x: -86.8659973, y: -2.01799989, z: 40.9669991}
+  nodeCount: 4
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &1748555185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,11 +2183,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808479380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -78.3199997, y: -2.70000005, z: 32.2200012}
+  m_LocalPosition: {x: -78.3199997, y: -3.03685403, z: 32.2200012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 363476290}
   - {fileID: 1444920031}
+  - {fileID: 1235182993}
   m_Father: {fileID: 1250271304}
   m_RootOrder: 8
 --- !u!114 &1808479382
@@ -1722,7 +2205,57 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 623832080}
   - {fileID: 138584798}
+  - {fileID: 1615595203}
   pointName: 4
+--- !u!1 &1848055434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1848055435}
+  - 114: {fileID: 1848055436}
+  m_Layer: 0
+  m_Name: Path 3-6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1848055435
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848055434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.14700317, y: 0, z: 5.36599922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 961835354}
+  m_RootOrder: 2
+--- !u!114 &1848055436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848055434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 3-6
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -90.7559967, y: -2.59599996, z: 16.1380005}
+  - {x: -95.4821472, y: -2.59599996, z: 16.5450993}
+  - {x: -95.8308563, y: -2.59599996, z: 21.0758896}
+  - {x: -98.9029999, y: -2.59599996, z: 21.5039997}
+  nodeCount: 4
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &1903184630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +2340,56 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 0}
   pointName: 1
+--- !u!1 &1948575260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1948575261}
+  - 114: {fileID: 1948575262}
+  m_Layer: 0
+  m_Name: Path 5-7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1948575261
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948575260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 138584797}
+  m_RootOrder: 2
+--- !u!114 &1948575262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948575260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 5-7
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -86.4960022, y: -2.01799989, z: 28.3050003}
+  - {x: -85.0596771, y: -2.01799989, z: 30.4742298}
+  - {x: -84.0940399, y: -2.01799989, z: 32.2304497}
+  - {x: -82.5065765, y: -2.01799989, z: 32.8565254}
+  - {x: -82.5400009, y: -2.01799989, z: 35.8400002}
+  nodeCount: 5
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &1979251268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +2480,55 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &2068869318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2068869319}
+  - 114: {fileID: 2068869320}
+  m_Layer: 0
+  m_Name: Path 8-7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068869319
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068869318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 80957159}
+  m_RootOrder: 0
+--- !u!114 &2068869320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068869318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 8-7
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -86.8659973, y: -2.01799989, z: 40.9669991}
+  - {x: -85.9017563, y: -2.01799989, z: 38.6287689}
+  - {x: -82.8027115, y: -2.01799989, z: 37.6503792}
+  - {x: -82.5400009, y: -2.01799989, z: 35.8400002}
+  nodeCount: 4
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &2104951481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +2552,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2104951481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16.9400005}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 623832079}
@@ -1939,8 +2571,8 @@ MonoBehaviour:
   pathName: 1-4
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -78.3199997, y: -2.70000005, z: 14.8769999}
-  - {x: -78.3199997, y: -2.70000005, z: 32.2200012}
+  - {x: -78.3199997, y: -3.00256109, z: 14.8769999}
+  - {x: -78.3199997, y: -3.03685403, z: 32.2200012}
   nodeCount: 2
   initialized: 1
   initialName: New Path 1

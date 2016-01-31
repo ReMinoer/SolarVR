@@ -22,7 +22,6 @@ public class AutoNavigationManager : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(isWalking);
         if(!isWalking)
         {
             if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(1))
@@ -41,13 +40,12 @@ public class AutoNavigationManager : MonoBehaviour {
             {
                 if (autoEnable)
                 {
-                    Debug.Log("PathChosen");
                     ChoosePath();
                 }
             }
             if (autoEnable)
             {
-                NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
+               NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
                 nextKeyPoint.Details(displayer);
             }
         }
@@ -90,7 +88,7 @@ public class AutoNavigationManager : MonoBehaviour {
         string StartPositionName = closerKeyPoint.pointName;
         
         pathName = StartPositionName + '-' + nextKeyPoint.pointName;
-        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName),"easetype", iTween.EaseType.linear, "speed", 3, "onstart", "StartWalking","oncomplete","StopWalking"));
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName),"easetype", iTween.EaseType.linear, "speed", 2.0, "onstart", "StartWalking","oncomplete","StopWalking"));
 
         closerKeyPoint = nextKeyPoint;
         adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
