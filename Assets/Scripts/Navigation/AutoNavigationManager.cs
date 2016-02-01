@@ -117,6 +117,10 @@ public class AutoNavigationManager : MonoBehaviour {
     {
         isWalking = false;
         displayer.gameObject.SetActive(true);
+        if (adjacentsKeyPoints.Count == 1)
+        {
+            ChoosePath();
+        }
     }
 
     void StartWalking()
