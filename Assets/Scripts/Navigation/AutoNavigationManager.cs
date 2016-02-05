@@ -96,14 +96,18 @@ public class AutoNavigationManager : MonoBehaviour {
 
     private NavigationKeyPoint ClosestKeypoint()
     {
+        /*
         Vector3 pathDirection = transform.position + transform.forward * 15.0f;
         float distance = Vector3.Distance(pathDirection, adjacentsKeyPoints[0].transform.position);
-
+        */
+        float distance = float.MaxValue;
         NavigationKeyPoint nextKeyPoint = adjacentsKeyPoints[0];
+        Vector3 pathDirection = transform.forward;
 
         for (int i = 0; i < adjacentsKeyPoints.Count; i++)
         {
-            float newDistance = Vector3.Distance(pathDirection, adjacentsKeyPoints[i].transform.position);
+            //float newDistance = Vector3.Distance(pathDirection, adjacentsKeyPoints[i].transform.position);
+            float newDistance = Vector3.Dot(pathDirection, transform.position - adjacentsKeyPoints[i].transform.position);
             if (newDistance < distance)
             {
                 nextKeyPoint = adjacentsKeyPoints[i];
