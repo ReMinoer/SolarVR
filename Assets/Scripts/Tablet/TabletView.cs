@@ -5,25 +5,31 @@ using UnityEngine;
 [Serializable]
 public class TabletView : MonoBehaviour
 {
+    public GameObject Tablet;
     public MapScreen MapScreen;
-    public MaterialScreen MaterialScreen;
+    //public MaterialScreen MaterialScreen;
+    private WebScreen _materialScreen;
     private IList<ITabletScreen> _screens;
 
     void Start()
     {
+        _materialScreen = new WebScreen(Tablet);
+
         _screens = new List<ITabletScreen>
         {
             MapScreen,
-            MaterialScreen
+            _materialScreen
         };
     }
 
-    public void ShowMaterialInfo(Material material, MaterialInfo info)
+    public void ShowMaterialInfo(string url)//Material material, MaterialInfo info)
     {
-        MaterialScreen.Material = material;
-        MaterialScreen.MaterialInfo = info;
+        //MaterialScreen.Material = material;
+        //MaterialScreen.MaterialInfo = info;
 
-        ChangeScreen(MaterialScreen);
+        _materialScreen.Url = url;
+
+        ChangeScreen(_materialScreen);
     }
 
     public void BackToDefault()
