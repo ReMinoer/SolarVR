@@ -22,7 +22,6 @@ public class AutoNavigationManager : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(isWalking);
         if(!isWalking)
         {
             if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(1))
@@ -41,13 +40,12 @@ public class AutoNavigationManager : MonoBehaviour {
             {
                 if (autoEnable)
                 {
-                    Debug.Log("PathChosen");
                     ChoosePath();
                 }
             }
             if (autoEnable)
             {
-                NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
+               NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
                 nextKeyPoint.Details(displayer);
             }
         }
@@ -90,7 +88,7 @@ public class AutoNavigationManager : MonoBehaviour {
         string StartPositionName = closerKeyPoint.pointName;
         
         pathName = StartPositionName + '-' + nextKeyPoint.pointName;
-        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName),"easetype", iTween.EaseType.linear, "speed", 3, "onstart", "StartWalking","oncomplete","StopWalking"));
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName),"easetype", iTween.EaseType.linear, "speed", 2.0, "onstart", "StartWalking","oncomplete","StopWalking"));
 
         closerKeyPoint = nextKeyPoint;
         adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
@@ -98,14 +96,18 @@ public class AutoNavigationManager : MonoBehaviour {
 
     private NavigationKeyPoint ClosestKeypoint()
     {
+        /*
         Vector3 pathDirection = transform.position + transform.forward * 15.0f;
         float distance = Vector3.Distance(pathDirection, adjacentsKeyPoints[0].transform.position);
-
+        */
+        float distance = float.MaxValue;
         NavigationKeyPoint nextKeyPoint = adjacentsKeyPoints[0];
+        Vector3 pathDirection = transform.forward;
 
         for (int i = 0; i < adjacentsKeyPoints.Count; i++)
         {
-            float newDistance = Vector3.Distance(pathDirection, adjacentsKeyPoints[i].transform.position);
+            //float newDistance = Vector3.Distance(pathDirection, adjacentsKeyPoints[i].transform.position);
+            float newDistance = Vector3.Dot(pathDirection, transform.position - adjacentsKeyPoints[i].transform.position);
             if (newDistance < distance)
             {
                 nextKeyPoint = adjacentsKeyPoints[i];
@@ -119,6 +121,10 @@ public class AutoNavigationManager : MonoBehaviour {
     {
         isWalking = false;
         displayer.gameObject.SetActive(true);
+        if (adjacentsKeyPoints.Count == 1)
+        {
+            ChoosePath();
+        }
     }
 
     void StartWalking()
