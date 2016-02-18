@@ -1195,8 +1195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a2a16e45df4804291da05b0b108a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tablet: {fileID: 218799271}
   MapScreen: {fileID: 404296132}
-  MaterialScreen: {fileID: 438876467}
 --- !u!114 &1451029760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,7 +1316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307d731083c9605478c5201fcf704e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dictionary: {fileID: 2120780491}
   Tablet: {fileID: 218799271}
   View: {fileID: 1451029759}
   MaterialCursor: {fileID: 1279132170}
