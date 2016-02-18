@@ -2330,6 +2330,7 @@ MonoBehaviour:
   - {fileID: 1903184632}
   - {fileID: 383957042}
   - {fileID: 327619447}
+  TargetAngleMax: 45
 --- !u!1 &1178299074
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class AutoNavigationManager : MonoBehaviour
 {
     private string _pathName;
     public List<NavigationKeyPoint> keyPoints;
+    public float TargetAngleMax = 45;
 
     public bool Enabled { get; private set; }
     public bool IsMoving { get; private set; }
@@ -34,7 +35,7 @@ public class AutoNavigationManager : MonoBehaviour
 
         if (Enabled)
         {
-            TargetedKeyPoint = ClosestKeypoint();
+            TargetedKeyPoint = ClosestKeypoint(true);
             if (TargetedKeyPoint != null && MiddleVR.VRDeviceMgr.IsWandButtonToggled(0, true))
                 ChoosePath();
         }
@@ -79,20 +80,26 @@ public class AutoNavigationManager : MonoBehaviour
         AdjacentsKeyPoints = CurrentKeyPoint.adjacentsKeyPoints;
     }
 
-    private NavigationKeyPoint ClosestKeypoint()
+    private NavigationKeyPoint ClosestKeypoint(bool angleFilter)
     {
         float dotMax = float.MinValue;
         NavigationKeyPoint result = null;
+        Vector3 lookDirection = transform.forward;
 
         foreach (NavigationKeyPoint keyPoint in AdjacentsKeyPoints)
         {
-            float dot = Vector3.Dot(transform.forward.normalized, (keyPoint.transform.position - transform.position).normalized);
+            Vector3 move = keyPoint.transform.position - transform.position;
+            if (angleFilter && Vector3.Angle(lookDirection, move) > TargetAngleMax)
+                continue;
+
+            float dot = Vector3.Dot(lookDirection.normalized, move.normalized);
             if (dot > dotMax)
             {
                 result = keyPoint;
                 dotMax = dot;
             }
         }
+
         return result;
     }
 
@@ -106,8 +113,9 @@ public class AutoNavigationManager : MonoBehaviour
         IsMoving = false;
         if (AdjacentsKeyPoints.Count == 1)
         {
-            TargetedKeyPoint = ClosestKeypoint();
-            ChoosePath();
+            TargetedKeyPoint = ClosestKeypoint(false);
+            if (TargetedKeyPoint != null)
+                ChoosePath();
         }
     }
 }

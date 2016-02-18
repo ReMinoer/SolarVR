@@ -49,7 +49,7 @@ public class MapScreen : TabletScreen
         else
             FloorText.text = "";
 
-        if (AutoNavigationManager.Enabled && !AutoNavigationManager.IsMoving)
+        if (AutoNavigationManager.Enabled && !AutoNavigationManager.IsMoving && AutoNavigationManager.TargetedKeyPoint != null)
         {
             DestinationText.gameObject.SetActive(true);
             AutoNavText.gameObject.SetActive(true);

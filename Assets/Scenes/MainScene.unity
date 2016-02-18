@@ -1645,6 +1645,7 @@ MonoBehaviour:
   - {fileID: 1339710698}
   - {fileID: 1339710700}
   - {fileID: 1339710701}
+  TargetAngleMax: 45
 --- !u!1001 &1606818186
 Prefab:
   m_ObjectHideFlags: 0
