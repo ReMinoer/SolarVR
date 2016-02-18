@@ -13,6 +13,7 @@ public class MapScreen : TabletScreen
     public string HeadNodeName = "HeadNode";
     public float[] FloorsHeight;
     public string[] FloorsLabels;
+    public Image[] FloorsMaps;
     private GameObject _head;
 
     void Start()
@@ -43,6 +44,10 @@ public class MapScreen : TabletScreen
                 if (_head.transform.position.y - _head.transform.localPosition.y > FloorsHeight[i])
                 {
                     FloorText.text = FloorsLabels[i];
+
+                    for (int j = 0; j < FloorsMaps.Length; j++)
+                        FloorsMaps[j].gameObject.SetActive(j == i);
+
                     break;
                 }
         }
