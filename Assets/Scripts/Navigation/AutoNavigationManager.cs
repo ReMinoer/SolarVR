@@ -24,7 +24,7 @@ public class AutoNavigationManager : MonoBehaviour {
     {
         if(!isWalking)
         {
-            if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(1))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 autoEnable = !autoEnable;
                 if (autoEnable)
@@ -36,7 +36,7 @@ public class AutoNavigationManager : MonoBehaviour {
                     ActivateManualNavigation();
                 }
             }
-            if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(2))
+            if (MiddleVR.VRDeviceMgr.IsWandButtonToggled(0, true))
             {
                 if (autoEnable)
                 {
