@@ -7,7 +7,8 @@ public class InitializeFog : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GameObject camera = GameObject.Find (Camera);
-		UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(camera, "Assets/InitializeFog.cs (10,3)", "GlobalFog");
+		//camera.AddComponent<GlobalFog>();
+		//UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(camera, "Assets/InitializeFog.cs (10,3)", "GlobalFog");
 	}
 
 	// Update is called once per frame
