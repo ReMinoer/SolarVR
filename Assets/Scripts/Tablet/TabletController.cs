@@ -14,6 +14,7 @@ public class TabletController : MonoBehaviour
     public TabletView View;
     public GameObject MaterialCursor;
     public string HeadNodeName = "HeadNode";
+    public AutoNavigationManager AutoNavigationManager;
 
     private Mode _mode = Mode.Wand;
     private Material _currentMaterial;
@@ -82,7 +83,7 @@ public class TabletController : MonoBehaviour
         }
 
         if (_mode == Mode.Fixed)
-            Tablet.SetActive(_currentMaterial != null || MiddleVR.VRDeviceMgr.IsWandButtonPressed(2));
+            Tablet.SetActive(_currentMaterial != null || MiddleVR.VRDeviceMgr.IsWandButtonPressed(2) || (AutoNavigationManager.Enabled && !AutoNavigationManager.IsMoving));
     }
 
     private string GetConfigFilename()
