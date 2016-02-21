@@ -15,12 +15,13 @@ public class AutoNavigationManager : MonoBehaviour
 
     public string HeadNodeName = "HeadNode";
     private GameObject _head;
-
+    private CharacterController characterController;
     void Start()
     {
         CurrentKeyPoint = keyPoints[0];
         AdjacentsKeyPoints = CurrentKeyPoint.adjacentsKeyPoints;
         _head = GameObject.Find(HeadNodeName);
+        characterController = gameObject.GetComponent<CharacterController>();
     }
 
     void Update()
@@ -47,11 +48,13 @@ public class AutoNavigationManager : MonoBehaviour
 
     private void ActivateManualNavigation()
     {
+        characterController.enabled = true;
         iTween.Stop(gameObject);
     }
 
     private void ActivateAutoNavigation()
     {
+        characterController.enabled = false;
         Vector3 position = transform.position;
         float distance = Vector3.Distance(CurrentKeyPoint.transform.position, position);
         
