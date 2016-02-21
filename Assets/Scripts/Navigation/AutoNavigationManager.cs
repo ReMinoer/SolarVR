@@ -13,10 +13,14 @@ public class AutoNavigationManager : MonoBehaviour
     public NavigationKeyPoint TargetedKeyPoint { get; private set; }
     public List<NavigationKeyPoint> AdjacentsKeyPoints { get; private set; }
 
+    public string HeadNodeName = "HeadNode";
+    private GameObject _head;
+
     void Start()
     {
         CurrentKeyPoint = keyPoints[0];
         AdjacentsKeyPoints = CurrentKeyPoint.adjacentsKeyPoints;
+        _head = GameObject.Find(HeadNodeName);
     }
 
     void Update()
@@ -84,7 +88,7 @@ public class AutoNavigationManager : MonoBehaviour
     {
         float dotMax = float.MinValue;
         NavigationKeyPoint result = null;
-        Vector3 lookDirection = transform.forward;
+        Vector3 lookDirection = _head.transform.forward;
 
         foreach (NavigationKeyPoint keyPoint in AdjacentsKeyPoints)
         {

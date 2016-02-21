@@ -5,6 +5,7 @@ public class NavigationKeyPoint : MonoBehaviour
 {
     public List<NavigationKeyPoint> adjacentsKeyPoints;
     public string pointName;
+    public string name;
 
     void OnDrawGizmos()
     {

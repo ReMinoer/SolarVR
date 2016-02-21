@@ -85,6 +85,54 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &55211721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 55211722}
+  - 114: {fileID: 55211723}
+  m_Layer: 0
+  m_Name: Path 24-23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &55211722
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55211721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.35858917, y: 0, z: -2.96367264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1119942281}
+  m_RootOrder: 1
+--- !u!114 &55211723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55211721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 24-23
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -84.5459976, y: 1.89999998, z: 35.6746712}
+  - {x: -86.1353226, y: 1.89999998, z: 35.8911018}
+  - {x: -86.5910034, y: 1.89999998, z: 37.6160011}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &80957158
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +178,7 @@ MonoBehaviour:
   - {fileID: 1615595203}
   - {fileID: 1365315362}
   pointName: 8
+  name: Chambre
 --- !u!1 &99150168
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,12 +299,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 133409465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -85.8740005, y: 1.89999998, z: 32.7109985}
+  m_LocalPosition: {x: -86.8830032, y: 1.89999998, z: 32.7109985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1046837796}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 21
+  m_RootOrder: 22
 --- !u!114 &133409467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +319,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 1478689201}
   pointName: 19a
+  name: "Acc\xE8s 2nd \xE9tage"
 --- !u!1 &138584796
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +369,7 @@ MonoBehaviour:
   - {fileID: 1615595203}
   - {fileID: 1643952388}
   pointName: 5
+  name: Cuisine
 --- !u!1 &141255960
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +446,7 @@ Transform:
   m_Children:
   - {fileID: 512074278}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 19
+  m_RootOrder: 20
 --- !u!114 &182307376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +461,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 327619447}
   pointName: 17a
+  name: "Acc\xE8s 1er \xE9tage"
 --- !u!1 &200873348
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +619,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424646, guid: 6559c64ea605e2e4d92ed3d3a05524cb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.70000005
+      value: -2.32299995
       objectReference: {fileID: 0}
     - target: {fileID: 424646, guid: 6559c64ea605e2e4d92ed3d3a05524cb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -677,6 +729,54 @@ MonoBehaviour:
   - {x: -86.4960022, y: -2.01799989, z: 28.3050003}
   - {x: -85.549057, y: -2.01799989, z: 30.4742298}
   - {x: -85.3730011, y: -2.01799989, z: 32.3149986}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
+--- !u!1 &268853360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 268853361}
+  - 114: {fileID: 268853362}
+  m_Layer: 0
+  m_Name: Path 24-13b
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &268853361
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 268853360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.35858917, y: 0, z: -2.96367264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1119942281}
+  m_RootOrder: 0
+--- !u!114 &268853362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 268853360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 24-13b
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -84.5459976, y: 1.89999998, z: 35.6746712}
+  - {x: -85.7859268, y: 1.89999998, z: 35.131321}
+  - {x: -85.9045944, y: 1.89999998, z: 32.7109985}
   nodeCount: 3
   initialized: 1
   initialName: New Path 1
@@ -804,7 +904,7 @@ Transform:
   - {fileID: 439323766}
   - {fileID: 289489125}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!114 &327619447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +919,57 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 383957042}
   - {fileID: 379114872}
+  - {fileID: 1102894798}
   pointName: 16
+  name: Bureau
+--- !u!1 &361474719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 361474720}
+  - 114: {fileID: 361474721}
+  m_Layer: 0
+  m_Name: Path 13b-13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &361474720
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 361474719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.647415161, y: -.53399992, z: -6.08799934}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 882088567}
+  m_RootOrder: 0
+--- !u!114 &361474721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 361474719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 13b-13
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -85.9045868, y: 1.89999998, z: 32.7109985}
+  - {x: -85.7812958, y: 1.89999998, z: 31.6604233}
+  - {x: -86.552002, y: 1.36600006, z: 26.6229992}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &363476288
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +1045,7 @@ Transform:
   m_Children:
   - {fileID: 700049197}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!114 &379114872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,6 +1060,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 1942496114}
   pointName: 14b
+  name: "Acc\xE8s 1er \xE9tage"
 --- !u!1 &383957040
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +1106,7 @@ MonoBehaviour:
   - {fileID: 327619447}
   - {fileID: 1942496114}
   pointName: 12
+  name: Chambre
 --- !u!1 &395763833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1458,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &567065767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 567065768}
+  - 114: {fileID: 567065769}
+  m_Layer: 0
+  m_Name: Bedroom (1f)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &567065768
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 567065767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -86.5910034, y: 1.89999998, z: 37.6160011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1557773040}
+  - {fileID: 747775135}
+  m_Father: {fileID: 1250271304}
+  m_RootOrder: 28
+--- !u!114 &567065769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 567065767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829f3f404adb24f409cbb0f98724f8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adjacentsKeyPoints:
+  - {fileID: 882088568}
+  - {fileID: 1119942282}
+  pointName: 23
+  name: Chambre
 --- !u!1 &570163520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1648,7 @@ MonoBehaviour:
   - {fileID: 767602026}
   - {fileID: 1808479382}
   pointName: 1
+  name: "Ext\xE9rieur"
 --- !u!1 &641406073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,6 +1800,150 @@ MonoBehaviour:
   nodeCount: 6
   initialized: 1
   initialName: New Path 1
+--- !u!1 &714637055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 714637056}
+  - 114: {fileID: 714637057}
+  m_Layer: 0
+  m_Name: Path 13b-24
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &714637056
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714637055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 882088567}
+  m_RootOrder: 3
+--- !u!114 &714637057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714637055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 13b-24
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -85.9045868, y: 1.89999998, z: 32.7109985}
+  - {x: -85.7859268, y: 1.89999998, z: 35.131321}
+  - {x: -84.5459976, y: 1.89999998, z: 35.6746712}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
+--- !u!1 &747775134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 747775135}
+  - 114: {fileID: 747775136}
+  m_Layer: 0
+  m_Name: Path 23-24
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &747775135
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 747775134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .686416626, y: 0, z: -4.90500259}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 567065768}
+  m_RootOrder: 1
+--- !u!114 &747775136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 747775134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 23-24
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -86.5910034, y: 1.89999998, z: 37.6160011}
+  - {x: -86.1353226, y: 1.89999998, z: 35.891098}
+  - {x: -84.5459976, y: 1.89999998, z: 35.6746712}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
+--- !u!1 &754612121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 754612122}
+  - 114: {fileID: 754612123}
+  m_Layer: 0
+  m_Name: Path 13b-23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &754612122
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 754612121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 882088567}
+  m_RootOrder: 2
+--- !u!114 &754612123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 754612121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 13b-23
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -85.9045868, y: 1.89999998, z: 32.7109985}
+  - {x: -86.737854, y: 1.89999998, z: 34.69104}
+  - {x: -86.5910034, y: 1.89999998, z: 37.6160011}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &767602025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,6 +1977,7 @@ MonoBehaviour:
   - {fileID: 138584798}
   - {fileID: 1200516620}
   pointName: 2
+  name: "Entr\xE9e"
 --- !u!4 &767602027
 Transform:
   m_ObjectHideFlags: 0
@@ -1678,7 +2022,7 @@ Transform:
   m_Children:
   - {fileID: 1413403352}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 20
+  m_RootOrder: 21
 --- !u!114 &775813127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1694,6 +2038,7 @@ MonoBehaviour:
   - {fileID: 1585938757}
   - {fileID: 1585938757}
   pointName: 18
+  name: Chambre
 --- !u!1 &795795664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +2082,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 767602026}
   pointName: 10b
+  name: "Acc\xE8s rez-de-chauss\xE9e"
 --- !u!1 &812346378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,7 +2228,104 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1585938756}
+  m_RootOrder: 2
+--- !u!1 &882088566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 882088567}
+  - 114: {fileID: 882088568}
+  m_Layer: 0
+  m_Name: Halfway (1f)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882088567
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882088566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -85.9045868, y: 1.89999998, z: 32.7109985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 361474720}
+  - {fileID: 922165929}
+  - {fileID: 754612122}
+  - {fileID: 714637056}
+  m_Father: {fileID: 1250271304}
+  m_RootOrder: 15
+--- !u!114 &882088568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882088566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829f3f404adb24f409cbb0f98724f8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adjacentsKeyPoints:
+  - {fileID: 1585938757}
+  - {fileID: 133409467}
+  - {fileID: 567065769}
+  - {fileID: 1119942282}
+  pointName: 13b
+  name: Couloirs
+--- !u!1 &922165928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 922165929}
+  - 114: {fileID: 922165930}
+  m_Layer: 0
+  m_Name: Path 13b-19a
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &922165929
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922165928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 882088567}
   m_RootOrder: 1
+--- !u!114 &922165930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922165928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 13b-19a
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -85.9045868, y: 1.89999998, z: 32.7109985}
+  - {x: -86.8830032, y: 1.89999998, z: 32.7109985}
+  nodeCount: 2
+  initialized: 1
+  initialName: New Path 1
 --- !u!4 &923993378 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 03e07b68bd23f264186709f81361b2da, type: 3}
@@ -1982,8 +2425,9 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 623832080}
   - {fileID: 767602026}
-  - {fileID: 767602026}
+  - {fileID: 1585676775}
   pointName: 3
+  name: "Salle \xE0 manger"
 --- !u!1 &1046837795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,7 +2470,7 @@ MonoBehaviour:
   pathName: 19a-21
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -85.8740005, y: 1.89999998, z: 32.7109985}
+  - {x: -86.8830032, y: 1.89999998, z: 32.7109985}
   - {x: -86.843483, y: 2.57410789, z: 32.4392319}
   - {x: -87.0372925, y: 3.15423489, z: 31.8856106}
   - {x: -87.0372925, y: 4.36754704, z: 30.6749992}
@@ -2111,7 +2555,7 @@ Transform:
   m_Children:
   - {fileID: 395763834}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 18
+  m_RootOrder: 19
 --- !u!114 &1102894798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,6 +2570,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 1585676775}
   pointName: 17b
+  name: "Acc\xE8s rez-de-chauss\xE9e"
 --- !u!1 &1112633607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2690,52 @@ RectTransform:
   m_AnchoredPosition: {x: 1.29998779, y: .600000381}
   m_SizeDelta: {x: 0, y: 2.69999695}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &1119942280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1119942281}
+  - 114: {fileID: 1119942282}
+  m_Layer: 0
+  m_Name: 'Bedroom (1f) '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1119942281
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1119942280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -84.5459976, y: 1.89999998, z: 35.6746712}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 268853361}
+  - {fileID: 55211722}
+  m_Father: {fileID: 1250271304}
+  m_RootOrder: 29
+--- !u!114 &1119942282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1119942280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829f3f404adb24f409cbb0f98724f8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adjacentsKeyPoints:
+  - {fileID: 882088568}
+  - {fileID: 567065769}
+  pointName: 24
+  name: Chambre
 --- !u!1001 &1133910567
 Prefab:
   m_ObjectHideFlags: 0
@@ -2331,6 +2822,7 @@ MonoBehaviour:
   - {fileID: 383957042}
   - {fileID: 327619447}
   TargetAngleMax: 45
+  HeadNodeName: HeadNode
 --- !u!1 &1178299074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,6 +2913,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 1942496114}
   pointName: 10a
+  name: "Acc\xE8s 1er \xE9tage"
 --- !u!1 &1209427979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,6 +3052,7 @@ Transform:
   - {fileID: 1551731361}
   - {fileID: 383957041}
   - {fileID: 1585938756}
+  - {fileID: 882088567}
   - {fileID: 1903184631}
   - {fileID: 379114871}
   - {fileID: 327619446}
@@ -2571,6 +3065,8 @@ Transform:
   - {fileID: 1643952387}
   - {fileID: 1478689200}
   - {fileID: 1403594262}
+  - {fileID: 567065768}
+  - {fileID: 1119942281}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1 &1262749716
@@ -2767,6 +3263,7 @@ MonoBehaviour:
   - {fileID: 80957160}
   - {fileID: 1615595203}
   pointName: 9
+  name: Toilettes
 --- !u!1 &1378122856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,7 +3355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 654eb2207d0de00459c54995ec518376, type: 2}
       propertyPath: ConfigFile
-      value: Assets/gamepad.vrx
+      value: Assets/firestorm.vrx
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 654eb2207d0de00459c54995ec518376, type: 2}
       propertyPath: m_NavigationCollisions
@@ -2916,7 +3413,7 @@ Transform:
   - {fileID: 466906664}
   - {fileID: 1865255345}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 26
+  m_RootOrder: 27
 --- !u!114 &1403594263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2932,6 +3429,7 @@ MonoBehaviour:
   - {fileID: 1478689201}
   - {fileID: 1437457354}
   pointName: 22
+  name: Chambre
 --- !u!1 &1413403351
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +3553,7 @@ Transform:
   m_Children:
   - {fileID: 1580003129}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 22
+  m_RootOrder: 23
 --- !u!114 &1437457354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3068,8 +3566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentsKeyPoints:
-  - {fileID: 1585938757}
+  - {fileID: 882088568}
   pointName: 19b
+  name: "Acc\xE8s 1er \xE9tage"
 --- !u!1 &1444920030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,7 +3648,7 @@ Transform:
   - {fileID: 200873349}
   - {fileID: 2030740295}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 25
+  m_RootOrder: 26
 --- !u!114 &1478689201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3165,6 +3664,7 @@ MonoBehaviour:
   - {fileID: 1403594263}
   - {fileID: 1437457354}
   pointName: 21
+  name: Bureau
 --- !u!1 &1505946131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3811,55 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 1903184632}
   pointName: 14a
+  name: "Acc\xE8s 2nd \xE9tage"
+--- !u!1 &1557773039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1557773040}
+  - 114: {fileID: 1557773041}
+  m_Layer: 0
+  m_Name: Path 23-13b
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557773040
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1557773039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .686416626, y: 0, z: -4.90500259}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 567065768}
+  m_RootOrder: 0
+--- !u!114 &1557773041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1557773039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: 23-13b
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -86.5910034, y: 1.89999998, z: 37.6160011}
+  - {x: -86.2797394, y: 1.89999998, z: 34.69104}
+  - {x: -85.9045944, y: 1.89999998, z: 32.7109985}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
 --- !u!1001 &1560972946
 Prefab:
   m_ObjectHideFlags: 0
@@ -3389,7 +3938,7 @@ Transform:
   m_Children:
   - {fileID: 1505946132}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 23
+  m_RootOrder: 24
 --- !u!114 &1574127439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3404,6 +3953,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 138584798}
   pointName: 20b
+  name: "Acc\xE8s rez-de-chauss\xE9e"
 --- !u!1 &1580003128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,16 +3993,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: 19b-13
+  pathName: 19b-13b
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
   - {x: -86.1470032, y: 5.08300018, z: 30.6749992}
   - {x: -87.0372925, y: 4.36754656, z: 30.6749992}
   - {x: -87.0372925, y: 3.15423512, z: 31.8856144}
   - {x: -87.0372925, y: 2.57410836, z: 32.4392319}
-  - {x: -85.8933182, y: 1.94257486, z: 31.760561}
-  - {x: -86.552002, y: 1.36600006, z: 26.6229992}
-  nodeCount: 6
+  - {x: -85.9045868, y: 1.89999998, z: 32.7109985}
+  nodeCount: 5
   initialized: 1
   initialName: New Path 1
 --- !u!1 &1585676773
@@ -3498,7 +4047,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adjacentsKeyPoints:
   - {fileID: 961835355}
+  - {fileID: 182307376}
   pointName: 6
+  name: Cuisine
 --- !u!1 &1585938755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3526,8 +4077,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1277084672}
-  - {fileID: 840154041}
   - {fileID: 2028047873}
+  - {fileID: 840154041}
   - {fileID: 1965582667}
   m_Father: {fileID: 1250271304}
   m_RootOrder: 14
@@ -3546,8 +4097,9 @@ MonoBehaviour:
   - {fileID: 775813127}
   - {fileID: 1942496114}
   - {fileID: 1574127439}
-  - {fileID: 133409467}
+  - {fileID: 882088568}
   pointName: 13
+  name: Couloirs
 --- !u!1 &1615595201
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,6 +4149,7 @@ MonoBehaviour:
   - {fileID: 80957160}
   - {fileID: 1365315362}
   pointName: 7
+  name: Bureau
 --- !u!4 &1622969219 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 11240cf46f0cbe94c91de7aafc463af8, type: 3}
@@ -3629,7 +4182,7 @@ Transform:
   m_Children:
   - {fileID: 959941466}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 24
+  m_RootOrder: 25
 --- !u!114 &1643952388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3644,6 +4197,7 @@ MonoBehaviour:
   adjacentsKeyPoints:
   - {fileID: 1585938757}
   pointName: 20a
+  name: "Acc\xE8s 1er \xE9tage"
 --- !u!1 &1654112621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,6 +4516,7 @@ MonoBehaviour:
   - {fileID: 1615595203}
   - {fileID: 1643952388}
   pointName: 4
+  name: "Ext\xE9rieur"
 --- !u!1 &1832600145
 GameObject:
   m_ObjectHideFlags: 0
@@ -4135,7 +4690,7 @@ Transform:
   m_Children:
   - {fileID: 2086032637}
   m_Father: {fileID: 1250271304}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!114 &1903184632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4151,6 +4706,7 @@ MonoBehaviour:
   - {fileID: 379114872}
   - {fileID: 379114872}
   pointName: 15
+  name: Chambre
 --- !u!1 &1942496112
 GameObject:
   m_ObjectHideFlags: 0
@@ -4200,6 +4756,7 @@ MonoBehaviour:
   - {fileID: 795795666}
   - {fileID: 1551731362}
   pointName: 11
+  name: Salon
 --- !u!1 &1948575260
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,7 +4968,7 @@ GameObject:
   - 4: {fileID: 2028047873}
   - 114: {fileID: 2028047874}
   m_Layer: 0
-  m_Name: Path 13-19
+  m_Name: Path 13-13b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4428,7 +4985,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1585938756}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &2028047874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4440,12 +4997,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: 13-19a
+  pathName: 13-13b
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
   - {x: -86.552002, y: 1.36600006, z: 26.6229992}
-  - {x: -85.8170013, y: 1.89999998, z: 32.7109985}
-  nodeCount: 2
+  - {x: -85.7812958, y: 1.89999998, z: 31.6604233}
+  - {x: -85.9045944, y: 1.89999998, z: 32.7109985}
+  nodeCount: 3
   initialized: 1
   initialName: New Path 1
 --- !u!1 &2030740294

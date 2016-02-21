@@ -11,7 +11,7 @@ public class NavigationAutoDisplay : MonoBehaviour
         if (AutoNavigationManager.Enabled && !AutoNavigationManager.IsMoving && AutoNavigationManager.TargetedKeyPoint != null)
 	    {
 	        Text.gameObject.SetActive(true);
-	        Text.text = AutoNavigationManager.TargetedKeyPoint.pointName;
+	        Text.text = AutoNavigationManager.TargetedKeyPoint.name;
 	    }
 	    else
         {
