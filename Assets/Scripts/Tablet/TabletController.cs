@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 
 public class TabletController : MonoBehaviour
 {
@@ -8,11 +9,12 @@ public class TabletController : MonoBehaviour
         Fixed
     }
 
-    public MaterialInfoDictionary Dictionary;
+    //public MaterialInfoDictionary Dictionary;
     public GameObject Tablet;
     public TabletView View;
     public GameObject MaterialCursor;
     public string HeadNodeName = "HeadNode";
+    public AutoNavigationManager AutoNavigationManager;
 
     private Mode _mode = Mode.Wand;
     private Material _currentMaterial;
@@ -49,11 +51,18 @@ public class TabletController : MonoBehaviour
             {
                 if (MiddleVR.VRDeviceMgr.IsWandButtonToggled(1, true))
                 {
-                    MaterialInfo materialInfo = Dictionary[materialRenderer.material];
-                    if (materialInfo != null)
+                    //MaterialInfo materialInfo = Dictionary[materialRenderer.material];
+                    //if (materialInfo != null)
+
+                    string materialName = materialRenderer.material.mainTexture.name.Replace("(Instance)", "").Trim();
+                    string materialInfoFilename = Path.Combine("html/materials/", materialName + ".html");
+
+                    if (File.Exists(Path.Combine(Application.dataPath, materialInfoFilename)))
                     {
-                        View.ShowMaterialInfo(materialRenderer.material, materialInfo);
+                        //View.ShowMaterialInfo(materialRenderer.material, materialInfo);
                         _currentMaterial = materialRenderer.material;
+
+                        View.ShowMaterialInfo(materialInfoFilename);
 
                         MaterialCursor.SetActive(true);
                         MaterialCursor.transform.position = hit.point + hit.normal * 0.01f;
@@ -74,7 +83,7 @@ public class TabletController : MonoBehaviour
         }
 
         if (_mode == Mode.Fixed)
-            Tablet.SetActive(_currentMaterial != null || MiddleVR.VRDeviceMgr.IsWandButtonPressed(2));
+            Tablet.SetActive(_currentMaterial != null || MiddleVR.VRDeviceMgr.IsWandButtonPressed(2) || (AutoNavigationManager.Enabled && !AutoNavigationManager.IsMoving));
     }
 
     private string GetConfigFilename()

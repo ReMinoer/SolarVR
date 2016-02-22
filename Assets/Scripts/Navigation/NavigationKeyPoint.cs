@@ -1,16 +1,11 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class NavigationKeyPoint : MonoBehaviour
 {
     public List<NavigationKeyPoint> adjacentsKeyPoints;
     public string pointName;
-
-    public void Details(Text displayer)
-    {
-        displayer.text = pointName;
-    }
+    public string name;
 
     void OnDrawGizmos()
     {

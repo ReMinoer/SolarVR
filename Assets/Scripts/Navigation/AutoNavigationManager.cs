@@ -1,68 +1,62 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class AutoNavigationManager : MonoBehaviour {
-
-    private string pathName;
+public class AutoNavigationManager : MonoBehaviour
+{
+    private string _pathName;
     public List<NavigationKeyPoint> keyPoints;
-    private NavigationKeyPoint closerKeyPoint;
-    private List<NavigationKeyPoint> adjacentsKeyPoints;
+    public float TargetAngleMax = 45;
 
-    private bool autoEnable = false;
-    private bool isWalking = false;
+    public bool Enabled { get; private set; }
+    public bool IsMoving { get; private set; }
+    public NavigationKeyPoint CurrentKeyPoint { get; private set; }
+    public NavigationKeyPoint TargetedKeyPoint { get; private set; }
+    public List<NavigationKeyPoint> AdjacentsKeyPoints { get; private set; }
 
-    public Text displayer;
+    public string HeadNodeName = "HeadNode";
+    private GameObject _head;
+    private CharacterController characterController;
     void Start()
     {
-        closerKeyPoint = keyPoints[0];
-        adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
-        displayer.gameObject.SetActive(false);
+        CurrentKeyPoint = keyPoints[0];
+        AdjacentsKeyPoints = CurrentKeyPoint.adjacentsKeyPoints;
+        _head = GameObject.Find(HeadNodeName);
+        characterController = gameObject.GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        if(!isWalking)
+        if (IsMoving)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(1))
-            {
-                autoEnable = !autoEnable;
-                if (autoEnable)
-                {
-                    ActivateAutoNavigation();
-                }
-                else
-                {
-                    ActivateManualNavigation();
-                }
-            }
-            if (MiddleVR.VRDeviceMgr.IsWandButtonPressed(2))
-            {
-                if (autoEnable)
-                {
-                    ChoosePath();
-                }
-            }
-            if (autoEnable)
-            {
-               NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
-                nextKeyPoint.Details(displayer);
-            }
+            Enabled = !Enabled;
+            if (Enabled)
+                ActivateAutoNavigation();
+            else
+                ActivateManualNavigation();
         }
-        
+
+        if (Enabled)
+        {
+            TargetedKeyPoint = ClosestKeypoint(true);
+            if (TargetedKeyPoint != null && MiddleVR.VRDeviceMgr.IsWandButtonToggled(0, true))
+                ChoosePath();
+        }
     }
 
     private void ActivateManualNavigation()
     {
-        displayer.gameObject.SetActive(false);
+        characterController.enabled = true;
         iTween.Stop(gameObject);
     }
 
     private void ActivateAutoNavigation()
     {
-        displayer.gameObject.SetActive(true);
+        characterController.enabled = false;
         Vector3 position = transform.position;
-        float distance = Vector3.Distance(closerKeyPoint.transform.position, position);
+        float distance = Vector3.Distance(CurrentKeyPoint.transform.position, position);
         
         for (int i = 0; i < keyPoints.Count; i++)
         {
@@ -70,66 +64,65 @@ public class AutoNavigationManager : MonoBehaviour {
             if (newDistance < distance)
             {
                 distance = newDistance;
-                closerKeyPoint = keyPoints[i];
+                CurrentKeyPoint = keyPoints[i];
             }
         }
-        adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
+        AdjacentsKeyPoints = CurrentKeyPoint.adjacentsKeyPoints;
         BlinkToCloserKeyPoint();
     }
 
     private void BlinkToCloserKeyPoint()
     {
-        transform.position = closerKeyPoint.transform.position;
+        transform.position = CurrentKeyPoint.transform.position;
     }
 
     private void ChoosePath()
     {
-        NavigationKeyPoint nextKeyPoint = ClosestKeypoint();
-        string StartPositionName = closerKeyPoint.pointName;
-        
-        pathName = StartPositionName + '-' + nextKeyPoint.pointName;
-        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(pathName),"easetype", iTween.EaseType.linear, "speed", 2.0, "onstart", "StartWalking","oncomplete","StopWalking"));
+        string startPositionName = CurrentKeyPoint.pointName;
 
-        closerKeyPoint = nextKeyPoint;
-        adjacentsKeyPoints = closerKeyPoint.adjacentsKeyPoints;
+        _pathName = startPositionName + '-' + TargetedKeyPoint.pointName;
+        iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(_pathName), "easetype", iTween.EaseType.linear, "speed", 2.0, "onstart", "StartWalking", "oncomplete", "StopWalking"));
+
+        CurrentKeyPoint = TargetedKeyPoint;
+        AdjacentsKeyPoints = CurrentKeyPoint.adjacentsKeyPoints;
     }
 
-    private NavigationKeyPoint ClosestKeypoint()
+    private NavigationKeyPoint ClosestKeypoint(bool angleFilter)
     {
-        /*
-        Vector3 pathDirection = transform.position + transform.forward * 15.0f;
-        float distance = Vector3.Distance(pathDirection, adjacentsKeyPoints[0].transform.position);
-        */
-        float distance = float.MaxValue;
-        NavigationKeyPoint nextKeyPoint = adjacentsKeyPoints[0];
-        Vector3 pathDirection = transform.forward;
+        float dotMax = float.MinValue;
+        NavigationKeyPoint result = null;
+        Vector3 lookDirection = _head.transform.forward;
 
-        for (int i = 0; i < adjacentsKeyPoints.Count; i++)
+        foreach (NavigationKeyPoint keyPoint in AdjacentsKeyPoints)
         {
-            //float newDistance = Vector3.Distance(pathDirection, adjacentsKeyPoints[i].transform.position);
-            float newDistance = Vector3.Dot(pathDirection, transform.position - adjacentsKeyPoints[i].transform.position);
-            if (newDistance < distance)
+            Vector3 move = keyPoint.transform.position - transform.position;
+            if (angleFilter && Vector3.Angle(lookDirection, move) > TargetAngleMax)
+                continue;
+
+            float dot = Vector3.Dot(lookDirection.normalized, move.normalized);
+            if (dot > dotMax)
             {
-                nextKeyPoint = adjacentsKeyPoints[i];
-                distance = newDistance;
+                result = keyPoint;
+                dotMax = dot;
             }
         }
-        return nextKeyPoint;
-    }
 
-    void StopWalking()
-    {
-        isWalking = false;
-        displayer.gameObject.SetActive(true);
-        if (adjacentsKeyPoints.Count == 1)
-        {
-            ChoosePath();
-        }
+        return result;
     }
 
     void StartWalking()
     {
-        displayer.gameObject.SetActive(false);
-        isWalking = true;
+        IsMoving = true;
+    }
+
+    void StopWalking()
+    {
+        IsMoving = false;
+        if (AdjacentsKeyPoints.Count == 1)
+        {
+            TargetedKeyPoint = ClosestKeypoint(false);
+            if (TargetedKeyPoint != null)
+                ChoosePath();
+        }
     }
 }

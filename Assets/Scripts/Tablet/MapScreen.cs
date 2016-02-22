@@ -1,16 +1,19 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MapScreen : TabletScreen
 {
+    public AutoNavigationManager AutoNavigationManager;
     public RectTransform MapPanel;
     public Text FloorText;
+    public Text DestinationText;
+    public Text AutoNavText;
     public Image CursorImage;
     public BoxCollider MapBounds;
     public string HeadNodeName = "HeadNode";
     public float[] FloorsHeight;
     public string[] FloorsLabels;
+    public Image[] FloorsMaps;
     private GameObject _head;
 
     void Start()
@@ -41,10 +44,26 @@ public class MapScreen : TabletScreen
                 if (_head.transform.position.y - _head.transform.localPosition.y > FloorsHeight[i])
                 {
                     FloorText.text = FloorsLabels[i];
+
+                    for (int j = 0; j < FloorsMaps.Length; j++)
+                        FloorsMaps[j].gameObject.SetActive(j == i);
+
                     break;
                 }
         }
         else
             FloorText.text = "";
+
+        if (AutoNavigationManager.Enabled && !AutoNavigationManager.IsMoving && AutoNavigationManager.TargetedKeyPoint != null)
+        {
+            DestinationText.gameObject.SetActive(true);
+            AutoNavText.gameObject.SetActive(true);
+            DestinationText.text = string.Format("Cible : {0}", AutoNavigationManager.TargetedKeyPoint.pointName);
+        }
+        else
+        {
+            DestinationText.gameObject.SetActive(false);
+            AutoNavText.gameObject.SetActive(false);
+        }
     }
 }
