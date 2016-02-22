@@ -618,7 +618,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532790493}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
@@ -841,7 +841,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 654eb2207d0de00459c54995ec518376, type: 2}
       propertyPath: ConfigFile
-      value: Assets/gamepad.vrx
+      value: Assets/default.vrx
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 654eb2207d0de00459c54995ec518376, type: 2}
       propertyPath: m_NavigationCollisions
