@@ -27,7 +27,7 @@ public class TabletController : MonoBehaviour
         _head = GameObject.Find(HeadNodeName);
 
         if (!(GetConfigFilename() == "Assets/default.vrx"
-            || GetConfigFilename() == "Assets/gamepad.vrx"))
+            || GetConfigFilename().Contains("gamepad")))
         {
             Tablet.transform.localPosition = 0.25f * Vector3.forward;
             Tablet.transform.localRotation = Quaternion.AngleAxis(90, Vector3.right);
