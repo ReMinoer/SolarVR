@@ -39,7 +39,7 @@ public class TabletController : MonoBehaviour
         {
             _mode = Mode.Fixed;
             Tablet.SetActive(false);
-        }
+		}
     }
 
     void Update()
@@ -47,10 +47,11 @@ public class TabletController : MonoBehaviour
 		if (_mode == Mode.Fixed)
 			_hand.transform.position = _head.transform.position;
 
+		LayerMask layerMask = ~(LayerMask.NameToLayer("Ignore Raycast"));
         var ray = new Ray(_head.transform.position, _head.transform.forward);
 
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+		if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
             var materialRenderer = hit.collider.gameObject.GetComponent<Renderer>();
             if (materialRenderer != null)
