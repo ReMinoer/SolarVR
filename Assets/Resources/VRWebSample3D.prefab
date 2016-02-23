@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2369528}
   - 114: {fileID: 11434850}
   - 114: {fileID: 11485126}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: VRWebSample3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,6 +107,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
