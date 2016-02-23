@@ -47,7 +47,7 @@ public class TabletController : MonoBehaviour
 		if (_mode == Mode.Fixed)
 			_hand.transform.position = _head.transform.position;
 
-		LayerMask layerMask = ~(LayerMask.NameToLayer("Ignore Raycast"));
+        LayerMask layerMask = ~Physics.IgnoreRaycastLayer;
         var ray = new Ray(_head.transform.position, _head.transform.forward);
 
         RaycastHit hit;
@@ -58,15 +58,11 @@ public class TabletController : MonoBehaviour
             {
                 if (MiddleVR.VRDeviceMgr.IsWandButtonToggled(1, true))
                 {
-                    //MaterialInfo materialInfo = Dictionary[materialRenderer.material];
-                    //if (materialInfo != null)
-
                     string materialName = materialRenderer.material.mainTexture.name.Replace("(Instance)", "").Trim();
                     string materialInfoFilename = Path.Combine("html/materials/", materialName + ".html");
 
                     if (File.Exists(Path.Combine(Application.dataPath, materialInfoFilename)))
                     {
-                        //View.ShowMaterialInfo(materialRenderer.material, materialInfo);
                         _currentMaterial = materialRenderer.material;
 
                         View.ShowMaterialInfo(materialInfoFilename);
