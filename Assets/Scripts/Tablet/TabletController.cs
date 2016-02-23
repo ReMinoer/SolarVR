@@ -56,26 +56,29 @@ public class TabletController : MonoBehaviour
             var materialRenderer = hit.collider.gameObject.GetComponent<Renderer>();
             if (materialRenderer != null)
             {
-                if (MiddleVR.VRDeviceMgr.IsWandButtonToggled(1, true))
+                if (materialRenderer.material != null && materialRenderer.material.mainTexture != null)
                 {
-                    string materialName = materialRenderer.material.mainTexture.name.Replace("(Instance)", "").Trim();
-                    string materialInfoFilename = Path.Combine("html/materials/", materialName + ".html");
-
-                    if (File.Exists(Path.Combine(Application.dataPath, materialInfoFilename)))
+                    if (MiddleVR.VRDeviceMgr.IsWandButtonToggled(1, true))
                     {
-                        _currentMaterial = materialRenderer.material;
+                        string materialName = materialRenderer.material.mainTexture.name.Replace("(Instance)", "").Trim();
+                        string materialInfoFilename = Path.Combine("html/materials/", materialName + ".html");
 
-                        View.ShowMaterialInfo(materialInfoFilename);
+                        if (File.Exists(Path.Combine(Application.dataPath, materialInfoFilename)))
+                        {
+                            _currentMaterial = materialRenderer.material;
 
-                        MaterialCursor.SetActive(true);
-                        MaterialCursor.transform.position = hit.point + hit.normal * 0.01f;
-                        MaterialCursor.transform.rotation = Quaternion.LookRotation(hit.normal);
+                            View.ShowMaterialInfo(materialInfoFilename);
 
-                        return;
+                            MaterialCursor.SetActive(true);
+                            MaterialCursor.transform.position = hit.point + hit.normal * 0.01f;
+                            MaterialCursor.transform.rotation = Quaternion.LookRotation(hit.normal);
+
+                            return;
+                        }
                     }
                 }
 
-                if (_currentMaterial != null && _currentMaterial.mainTexture != materialRenderer.material.mainTexture)
+                if (materialRenderer.material != null && _currentMaterial != null && _currentMaterial.mainTexture != materialRenderer.material.mainTexture)
                 {
                     View.BackToDefault();
                     _currentMaterial = null;
