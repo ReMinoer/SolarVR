@@ -10,7 +10,8 @@ public class MapScreen : TabletScreen
     public Text AutoNavText;
     public Image CursorImage;
     public BoxCollider MapBounds;
-    public string HeadNodeName = "HeadNode";
+	public string HeadNodeName = "HeadNode";
+	public GameObject User;
     public float[] FloorsHeight;
     public string[] FloorsLabels;
     public Image[] FloorsMaps;
@@ -38,10 +39,10 @@ public class MapScreen : TabletScreen
         Quaternion quaternion = Quaternion.FromToRotation(userForward, MapBounds.transform.forward);
         CursorImage.rectTransform.localRotation = Quaternion.Euler(0, 0, quaternion.eulerAngles.y);
 
-        if (MapBounds.bounds.Contains(_head.transform.position))
+		if (MapBounds.bounds.Contains(User.transform.position))
         {
             for (int i = 0; i < FloorsHeight.Length; i++)
-                if (_head.transform.position.y - _head.transform.localPosition.y > FloorsHeight[i])
+				if (User.transform.position.y > FloorsHeight[i])
                 {
                     FloorText.text = FloorsLabels[i];
 
