@@ -13,23 +13,26 @@ public class TabletController : MonoBehaviour
     public GameObject Tablet;
     public TabletView View;
     public GameObject MaterialCursor;
-    public string HeadNodeName = "HeadNode";
+	public string HeadNodeName = "HeadNode";
+	public string HandNodeName = "HandNode";
     public AutoNavigationManager AutoNavigationManager;
 
     private Mode _mode = Mode.Wand;
     private Material _currentMaterial;
-    private GameObject _head;
+	private GameObject _head;
+	private GameObject _hand;
 
     void Start()
     {
         MaterialCursor.SetActive(false);
 
-        _head = GameObject.Find(HeadNodeName);
+		_head = GameObject.Find(HeadNodeName);
+		_hand = GameObject.Find(HandNodeName);
 
         if (!(GetConfigFilename() == "Assets/default.vrx"
             || GetConfigFilename().Contains("gamepad")))
         {
-            Tablet.transform.localPosition = 0.25f * Vector3.forward;
+			_hand.transform.localPosition = _head.transform.position;
             Tablet.transform.localRotation = Quaternion.AngleAxis(90, Vector3.right);
         }
         else
@@ -40,7 +43,10 @@ public class TabletController : MonoBehaviour
     }
 
     void Update()
-    {
+	{
+		if (_mode == Mode.Fixed)
+			_hand.transform.position = _head.transform.position;
+
         var ray = new Ray(_head.transform.position, _head.transform.forward);
 
         RaycastHit hit;
